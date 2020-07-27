@@ -9,7 +9,29 @@
 import UIKit
 
 class GameViewController: UIViewController {
-
+    
+    // Day Navigation Label and Buttons
+    @IBOutlet weak var nextDayButton: UIButton!
+    @IBOutlet weak var dayBeforeButton: UIButton!
+    @IBOutlet weak var dateTitleLabel: UILabel!
+    
+    // Home Team Labels
+    @IBOutlet weak var homeImageView: UIImageView!
+    @IBOutlet weak var homeStandingsLabel: UILabel!
+    @IBOutlet weak var homeTeamNameLabel: UILabel!
+    
+    //Away Team Labels
+    @IBOutlet weak var awayImageView: UIImageView!
+    @IBOutlet weak var awayStandingsLabel: UILabel!
+    @IBOutlet weak var awayTeamNameLabel: UILabel!
+    
+    // Game Score and Stadium Labels
+    @IBOutlet weak var gameScoreLabel: UILabel!
+    @IBOutlet weak var stadiumButton: UIButton!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

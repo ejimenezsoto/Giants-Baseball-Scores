@@ -91,35 +91,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dQ-iT-ff3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dQ-iT-ff3" userLabel="Home Team Name Label">
                                 <rect key="frame" x="63" y="293" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lha-ko-SQx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lha-ko-SQx" userLabel="Away Team Name Label">
                                 <rect key="frame" x="311" y="293" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="JIg-r3-sho">
-                                <rect key="frame" x="146" y="520" width="122.5" height="108"/>
+                                <rect key="frame" x="146" y="592" width="122.5" height="36"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team vs Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qnF-5g-uWJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="122.5" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ZP-qb-Oh1">
-                                        <rect key="frame" x="40.5" y="36" width="41.5" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epu-2L-tpC">
-                                        <rect key="frame" x="25" y="72" width="73" height="36"/>
+                                        <rect key="frame" x="25" y="0.0" width="73" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Stadium"/>
                                         <connections>
@@ -166,6 +154,19 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="awayImageView" destination="3F9-ug-T3T" id="y8I-PW-B8J"/>
+                        <outlet property="awayStandingsLabel" destination="6rJ-ic-Kcn" id="dee-a3-ph8"/>
+                        <outlet property="awayTeamNameLabel" destination="lha-ko-SQx" id="CMN-sw-ObU"/>
+                        <outlet property="dateTitleLabel" destination="x4f-XB-WGN" id="P3O-uC-inl"/>
+                        <outlet property="dayBeforeButton" destination="IxL-Ih-ARu" id="pqO-JN-THm"/>
+                        <outlet property="gameScoreLabel" destination="rrn-iR-T0x" id="4Zi-ln-TID"/>
+                        <outlet property="homeImageView" destination="kFG-cY-kh5" id="MIP-RN-mtw"/>
+                        <outlet property="homeStandingsLabel" destination="QZw-PP-2IC" id="o44-o5-7PB"/>
+                        <outlet property="homeTeamNameLabel" destination="0dQ-iT-ff3" id="MeN-Qe-itH"/>
+                        <outlet property="nextDayButton" destination="fxX-Zk-hR0" id="9Zr-22-flx"/>
+                        <outlet property="stadiumButton" destination="epu-2L-tpC" id="Fes-iL-lZZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugO-0p-Xfd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
