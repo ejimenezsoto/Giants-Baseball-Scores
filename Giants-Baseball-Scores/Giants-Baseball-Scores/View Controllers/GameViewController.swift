@@ -10,11 +10,20 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    private var date = Date()
+    private var searchDateString = ""
+    
     // Day Navigation Label and Buttons
     @IBOutlet weak var nextDayButton: UIButton!
     @IBOutlet weak var dayBeforeButton: UIButton!
-    @IBOutlet weak var dateTitleLabel: UILabel!
-    
+    @IBOutlet weak var dateTitleLabel: UILabel! {
+        didSet {
+            let currentDate = Date()
+            if date == currentDate {
+                dateTitleLabel.text = "Today"
+            }
+        }
+    }
     // Home Team Labels
     @IBOutlet weak var homeImageView: UIImageView!
     @IBOutlet weak var homeStandingsLabel: UILabel!
@@ -31,22 +40,52 @@ class GameViewController: UIViewController {
     
     
     
+    @IBAction func tapdayBeforeButton(_ sender: UIButton) {
+         if let dayBefore = Calendar.current.date(byAdding: .day, value: -1, to: date) {
+             date = dayBefore
+             let dateFormatter = DateFormatter()
+             dateFormatter.dateFormat = "E, MMM d"
+             
+             let dateString = dateFormatter.string(from: dayBefore)
+             dateTitleLabel.text = dateString
+             dateTitleLabel.sizeToFit()
+             searchDateString = formatDate(date: date)
+         }
+     }
+     
+    @IBAction func tapNextDayButton(_ sender: UIButton) {
+         if let nextDay = Calendar.current.date(byAdding: .day, value: 1, to: date) {
+             date = nextDay
+             let dateFormatter = DateFormatter()
+             dateFormatter.dateFormat = "E, MMM d"
+             
+             let dateString = dateFormatter.string(from: nextDay)
+             dateTitleLabel.text = dateString
+             dateTitleLabel.sizeToFit()
+             searchDateString = formatDate(date: date)
+         }
+     }
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+       
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    private func formatDate(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateString = dateFormatter.string(from: date)
+        return dateString
     }
-    */
-
+    
+ 
+    
+    
+    
 }
