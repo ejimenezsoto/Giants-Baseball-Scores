@@ -14,6 +14,9 @@
 		79DD5C3024CBA38F001DD39D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79DD5C2E24CBA38F001DD39D /* LaunchScreen.storyboard */; };
 		79DD5C3F24CF3F94001DD39D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD5C3E24CF3F94001DD39D /* GameViewController.swift */; };
 		79DD5C4124CF3FB5001DD39D /* StadiumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD5C4024CF3FB5001DD39D /* StadiumViewController.swift */; };
+		8E8C186524CF41CB00F2F294 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8C186424CF41CB00F2F294 /* Game.swift */; };
+		8E8C186724CF41D000F2F294 /* Stadium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8C186624CF41D000F2F294 /* Stadium.swift */; };
+		8E8C186924CF41D900F2F294 /* Standing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8C186824CF41D900F2F294 /* Standing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		79DD5C3124CBA38F001DD39D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79DD5C3E24CF3F94001DD39D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		79DD5C4024CF3FB5001DD39D /* StadiumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumViewController.swift; sourceTree = "<group>"; };
+		8E8C186424CF41CB00F2F294 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Game.swift; path = "Giants-Baseball-Scores/Game.swift"; sourceTree = SOURCE_ROOT; };
+		8E8C186624CF41D000F2F294 /* Stadium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Stadium.swift; path = "Giants-Baseball-Scores/Stadium.swift"; sourceTree = SOURCE_ROOT; };
+		8E8C186824CF41D900F2F294 /* Standing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Standing.swift; path = "Giants-Baseball-Scores/Standing.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,9 @@
 		79DD5C3924CBA416001DD39D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8E8C186424CF41CB00F2F294 /* Game.swift */,
+				8E8C186624CF41D000F2F294 /* Stadium.swift */,
+				8E8C186824CF41D900F2F294 /* Standing.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,8 +207,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				79DD5C4124CF3FB5001DD39D /* StadiumViewController.swift in Sources */,
+				8E8C186724CF41D000F2F294 /* Stadium.swift in Sources */,
+				8E8C186524CF41CB00F2F294 /* Game.swift in Sources */,
 				79DD5C2424CBA38E001DD39D /* AppDelegate.swift in Sources */,
 				79DD5C3F24CF3F94001DD39D /* GameViewController.swift in Sources */,
+				8E8C186924CF41D900F2F294 /* Standing.swift in Sources */,
 				79DD5C2624CBA38E001DD39D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
