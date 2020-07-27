@@ -12,6 +12,8 @@
 		79DD5C2B24CBA38E001DD39D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79DD5C2924CBA38E001DD39D /* Main.storyboard */; };
 		79DD5C2D24CBA38F001DD39D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DD5C2C24CBA38F001DD39D /* Assets.xcassets */; };
 		79DD5C3024CBA38F001DD39D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79DD5C2E24CBA38F001DD39D /* LaunchScreen.storyboard */; };
+		79DD5C3F24CF3F94001DD39D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD5C3E24CF3F94001DD39D /* GameViewController.swift */; };
+		79DD5C4124CF3FB5001DD39D /* StadiumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD5C4024CF3FB5001DD39D /* StadiumViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		79DD5C2C24CBA38F001DD39D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79DD5C2F24CBA38F001DD39D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79DD5C3124CBA38F001DD39D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79DD5C3E24CF3F94001DD39D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		79DD5C4024CF3FB5001DD39D /* StadiumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 		79DD5C3B24CBA44C001DD39D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				79DD5C3E24CF3F94001DD39D /* GameViewController.swift */,
+				79DD5C4024CF3FB5001DD39D /* StadiumViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -191,7 +197,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79DD5C4124CF3FB5001DD39D /* StadiumViewController.swift in Sources */,
 				79DD5C2424CBA38E001DD39D /* AppDelegate.swift in Sources */,
+				79DD5C3F24CF3F94001DD39D /* GameViewController.swift in Sources */,
 				79DD5C2624CBA38E001DD39D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
