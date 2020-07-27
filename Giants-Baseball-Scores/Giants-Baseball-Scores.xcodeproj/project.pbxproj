@@ -357,7 +357,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 59V75HSK6N;
+				DEVELOPMENT_TEAM = ZLCFP6QUVG;
 				INFOPLIST_FILE = "Giants-Baseball-Scores/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -375,7 +375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 59V75HSK6N;
+				DEVELOPMENT_TEAM = ZLCFP6QUVG;
 				INFOPLIST_FILE = "Giants-Baseball-Scores/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
