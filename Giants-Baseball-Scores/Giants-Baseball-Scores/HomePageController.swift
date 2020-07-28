@@ -113,40 +113,38 @@ class HomePageController {
     }
     
     func fetchStandingsInfo(completion: @escaping (Result<[Standing], NetworkError>) -> Void) {
-           
-           var request = URLRequest(url: standingsURL)
-           request.httpMethod = HTTPMethod.get.rawValue
-           
-           
-           URLSession.shared.dataTask(with: request) { data, response, error in
-               
-               if let response = response as? HTTPURLResponse,
-                   response.statusCode == 401 {
-                   completion(.failure(.badDecode))
-                   return
-               }
-               
-               if let error = error {
-                   print("Error fetching Giants Standings: \(error)")
-                   completion(.failure(.badDecode))
-               }
-               
-               guard let data = data else {
-                   completion(.failure(.noData))
-                   return
-               }
-               
-               do {
-                   let standings = try self.jsonDecoder.decode([Standing].self, from: data)
-                   completion(.success(standings))
-                   
-               } catch {
-                   print("Error decoding Giants Standings: \(error)")
-                   completion(.failure(.badDecode))
-               }
-               
-           }.resume()
-       }
-       
-    
+        
+        var request = URLRequest(url: standingsURL)
+        request.httpMethod = HTTPMethod.get.rawValue
+        
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            if let response = response as? HTTPURLResponse,
+                response.statusCode == 401 {
+                completion(.failure(.badDecode))
+                return
+            }
+            
+            if let error = error {
+                print("Error fetching Giants Standings: \(error)")
+                completion(.failure(.badDecode))
+            }
+            
+            guard let data = data else {
+                completion(.failure(.noData))
+                return
+            }
+            
+            do {
+                let standings = try self.jsonDecoder.decode([Standing].self, from: data)
+                completion(.success(standings))
+                
+            } catch {
+                print("Error decoding Giants Standings: \(error)")
+                completion(.failure(.badDecode))
+            }
+            
+        }.resume()
+    }
 }
