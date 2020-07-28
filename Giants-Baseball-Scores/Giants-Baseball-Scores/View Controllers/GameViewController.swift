@@ -71,6 +71,10 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        homePageController.fetchGiantsSchedule { (result) in
+            print(result)
+        }
+        
     }
     
     private func formatDate(date: Date) -> String {
