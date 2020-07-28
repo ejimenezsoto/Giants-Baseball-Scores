@@ -15,9 +15,9 @@
 		79DD5C3F24CF3F94001DD39D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD5C3E24CF3F94001DD39D /* GameViewController.swift */; };
 		79DD5C4124CF3FB5001DD39D /* StadiumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD5C4024CF3FB5001DD39D /* StadiumViewController.swift */; };
 		8E22106A24CF587900795FCF /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E22106924CF587900795FCF /* HomePageController.swift */; };
-		8E8C186524CF41CB00F2F294 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8C186424CF41CB00F2F294 /* Game.swift */; };
-		8E8C186724CF41D000F2F294 /* Stadium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8C186624CF41D000F2F294 /* Stadium.swift */; };
-		8E8C186924CF41D900F2F294 /* Standing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8C186824CF41D900F2F294 /* Standing.swift */; };
+		8E8C186524CF41CB00F2F294 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8C186424CF41CB00F2F294 /* Schedule.swift */; };
+		8EE4237324CFDAC300D6CE0B /* TeamEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE4237224CFDAC300D6CE0B /* TeamEnums.swift */; };
+		8EE4237524CFE3F900D6CE0B /* NetworkEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE4237424CFE3F900D6CE0B /* NetworkEnums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +31,10 @@
 		79DD5C3E24CF3F94001DD39D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		79DD5C4024CF3FB5001DD39D /* StadiumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumViewController.swift; sourceTree = "<group>"; };
 		8E22106924CF587900795FCF /* HomePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomePageController.swift; path = "Giants-Baseball-Scores/HomePageController.swift"; sourceTree = SOURCE_ROOT; };
-		8E8C186424CF41CB00F2F294 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Game.swift; path = "Giants-Baseball-Scores/Game.swift"; sourceTree = SOURCE_ROOT; };
-		8E8C186624CF41D000F2F294 /* Stadium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Stadium.swift; path = "Giants-Baseball-Scores/Stadium.swift"; sourceTree = SOURCE_ROOT; };
-		8E8C186824CF41D900F2F294 /* Standing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Standing.swift; path = "Giants-Baseball-Scores/Standing.swift"; sourceTree = SOURCE_ROOT; };
+		8E8C186424CF41CB00F2F294 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Schedule.swift; path = "Giants-Baseball-Scores/Schedule.swift"; sourceTree = SOURCE_ROOT; };
+		8EE4237124CFD94600D6CE0B /* Stadiums.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stadiums.json; sourceTree = "<group>"; };
+		8EE4237224CFDAC300D6CE0B /* TeamEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEnums.swift; sourceTree = "<group>"; };
+		8EE4237424CFE3F900D6CE0B /* NetworkEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +67,9 @@
 		79DD5C2224CBA38E001DD39D /* Giants-Baseball-Scores */ = {
 			isa = PBXGroup;
 			children = (
+				8E22106B24CFBEF700795FCF /* Helpers */,
 				79DD5C3924CBA416001DD39D /* Models */,
 				79DD5C3A24CBA41C001DD39D /* Model Controller */,
-				79DD5C3C24CBA45C001DD39D /* Networking */,
 				79DD5C3B24CBA44C001DD39D /* View Controllers */,
 				79DD5C3D24CBA467001DD39D /* Views */,
 				79DD5C3724CBA3B1001DD39D /* Storyboard */,
@@ -100,9 +101,7 @@
 		79DD5C3924CBA416001DD39D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8E8C186424CF41CB00F2F294 /* Game.swift */,
-				8E8C186624CF41D000F2F294 /* Stadium.swift */,
-				8E8C186824CF41D900F2F294 /* Standing.swift */,
+				8E8C186424CF41CB00F2F294 /* Schedule.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,18 +123,21 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		79DD5C3C24CBA45C001DD39D /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
 		79DD5C3D24CBA467001DD39D /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8E22106B24CFBEF700795FCF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8EE4237124CFD94600D6CE0B /* Stadiums.json */,
+				8EE4237224CFDAC300D6CE0B /* TeamEnums.swift */,
+				8EE4237424CFE3F900D6CE0B /* NetworkEnums.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,13 +212,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				79DD5C4124CF3FB5001DD39D /* StadiumViewController.swift in Sources */,
-				8E8C186724CF41D000F2F294 /* Stadium.swift in Sources */,
-				8E8C186524CF41CB00F2F294 /* Game.swift in Sources */,
+				8E8C186524CF41CB00F2F294 /* Schedule.swift in Sources */,
 				79DD5C2424CBA38E001DD39D /* AppDelegate.swift in Sources */,
 				79DD5C3F24CF3F94001DD39D /* GameViewController.swift in Sources */,
 				8E22106A24CF587900795FCF /* HomePageController.swift in Sources */,
-				8E8C186924CF41D900F2F294 /* Standing.swift in Sources */,
+				8EE4237324CFDAC300D6CE0B /* TeamEnums.swift in Sources */,
 				79DD5C2624CBA38E001DD39D /* SceneDelegate.swift in Sources */,
+				8EE4237524CFE3F900D6CE0B /* NetworkEnums.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +365,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZLCFP6QUVG;
 				INFOPLIST_FILE = "Giants-Baseball-Scores/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -381,6 +384,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZLCFP6QUVG;
 				INFOPLIST_FILE = "Giants-Baseball-Scores/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
