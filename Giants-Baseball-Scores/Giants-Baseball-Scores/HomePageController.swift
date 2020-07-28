@@ -16,7 +16,8 @@ class HomePageController {
     
     var scheduledGames: Schedule?
     
-    private let baseURL = URL(string: "https://api.sportsdata.io/v3/mlb/scores/json/Games/2020")!
+    private var baseURL = URL(string: "https://api.sportsdata.io/v3/mlb/scores/json/Games/2020")!
+    
     
     private lazy var jsonDecoder: JSONDecoder = {
         let decoder = JSONDecoder()
@@ -30,13 +31,17 @@ class HomePageController {
         return dateFormatter
     }
     
-    func fetchGiantsSchedule(completion: @escaping (Result<Schedule, NetworkError>) -> Void) {
-
+    func fetchGiantsSchedule(completion: @escaping (Result<[Schedule], NetworkError>) -> Void) {
+        
         var request = URLRequest(url: baseURL)
         request.httpMethod = HTTPMethod.get.rawValue
         request.addValue("Ocp-Apim-Subscription-Key", forHTTPHeaderField: "e858b807cfa14840b026e5dc9f6f21a1")
         
-        URLSession.shared.dataTask(with: request) { data, _, error in
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            if let response = response {
+                print(response)
+            }
             
             if let error = error {
                 print("Error decoding schedule: \(error)")
@@ -44,12 +49,14 @@ class HomePageController {
             }
             
             guard let data = data else {
+                
                 completion(.failure(.noData))
                 return
             }
+            print(data)
             
             do {
-                let schedule = try self.jsonDecoder.decode(Schedule.self, from: data)
+                let schedule = try self.jsonDecoder.decode([Schedule].self, from: data)
                 completion(.success(schedule))
             } catch {
                 print("Error decoding Schedule: \(error)")
@@ -59,7 +66,6 @@ class HomePageController {
             
         }.resume()
     }
-    
 }
 
 

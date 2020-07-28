@@ -68,35 +68,10 @@ class GameViewController: UIViewController {
              searchDateString = formatDate(date: date)
          }
      }
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        homePageController.fetchGiantsSchedule { (result) in
-            
-            switch result {
-                
-            case .failure(let error):
-                print("Error: \(error)")
-                
-            case .success(_):
-                print("Hooray")
-                DispatchQueue.main.async {
-                    
-                    guard let game = self.game else { return }
-                    
-                    self.homeTeamNameLabel.text = game.homeTeamName
-                }
-                
-            }
-        }
-        
-       
     }
-    
-    
     
     private func formatDate(date: Date) -> String {
         let dateFormatter = DateFormatter()
