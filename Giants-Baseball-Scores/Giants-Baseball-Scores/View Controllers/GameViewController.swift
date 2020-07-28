@@ -11,7 +11,7 @@ import UIKit
 class GameViewController: UIViewController {
     
     // Homepage Controller temporary instance
-//    var homePageController = HomePageController()
+    let homePageController = HomePageController()
     
     var game: Schedule?
     private var date = Date()
@@ -41,7 +41,6 @@ class GameViewController: UIViewController {
     // Game Score and Stadium Labels
     @IBOutlet weak var gameScoreLabel: UILabel!
     @IBOutlet weak var stadiumButton: UIButton!
-    
     
     
     @IBAction func tapdayBeforeButton(_ sender: UIButton) {
@@ -75,11 +74,24 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        homePageController.fetchGamesInfo { (result) in
-//            let game = game else { return }
-//            
-//            
-//        }
+        homePageController.fetchGiantsSchedule { (result) in
+            
+            switch result {
+                
+            case .failure(let error):
+                print("Error: \(error)")
+                
+            case .success(_):
+                print("Hooray")
+                DispatchQueue.main.async {
+                    
+                    guard let game = self.game else { return }
+                    
+                    self.homeTeamNameLabel.text = game.homeTeamName
+                }
+                
+            }
+        }
         
        
     }

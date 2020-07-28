@@ -14,33 +14,32 @@ import Foundation
 struct Schedule: Decodable {
     // Properties
     var datetime: String
-    var homeTeamName: Team
-    var awayTeamName: Team
+    var homeTeamName: String
+    var awayTeamName: String
     var homeTeamRuns: Int?
     var awayTeamRuns: Int?
     var stadium: Stadium?
     
-    enum ScheduleCodingKeys: String, CodingKey {
+    private enum ScheduleCodingKeys: String, CodingKey {
         case DateTime, HomeTeam, AwayTeam, StadiumID, HomeTeamRuns, AwayTeamRuns
         
     }
 
     init(from decoder: Decoder, datetime: Date) throws {
         
-
         let container = try decoder.container(keyedBy: ScheduleCodingKeys.self)
         let datetime = try container.decode(String.self, forKey: .DateTime)
-        let homeTeamName = try container.decode(Team.self, forKey: .HomeTeam)
-        let awayTeamName = try container.decode(Team.self, forKey: .AwayTeam)
-        let homeTeamRuns = try container.decode(Int.self, forKey: .HomeTeamRuns)
-        let awayTeamRuns = try container.decode(Int.self, forKey: .AwayTeamRuns)
+        let HomeTeam = try container.decode(String.self, forKey: .HomeTeam)
+        let AwayTeam = try container.decode(String.self, forKey: .AwayTeam)
+        let HomeTeamRuns = try container.decode(Int.self, forKey: .HomeTeamRuns)
+        let AwayTeamRuns = try container.decode(Int.self, forKey: .AwayTeamRuns)
         
         
         self.datetime = datetime
-        self.homeTeamName = homeTeamName
-        self.awayTeamName = awayTeamName
-        self.homeTeamRuns = homeTeamRuns
-        self.awayTeamRuns = awayTeamRuns
+        self.homeTeamName = HomeTeam
+        self.awayTeamName = AwayTeam
+        self.homeTeamRuns = HomeTeamRuns
+        self.awayTeamRuns = AwayTeamRuns
   
     }
 }
