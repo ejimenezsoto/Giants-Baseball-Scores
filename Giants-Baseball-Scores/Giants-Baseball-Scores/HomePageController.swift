@@ -16,7 +16,9 @@ class HomePageController {
     
     var scheduledGames: Schedule?
     
-      
+    private var baseURL = URL(string: "https://api.sportsdata.io/v3/mlb/scores/json/Games/2020")!
+    
+    
     private lazy var jsonDecoder: JSONDecoder = {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
@@ -30,7 +32,7 @@ class HomePageController {
     }
     
     func fetchGiantsSchedule(completion: @escaping (Result<[Schedule], NetworkError>) -> Void) {
-
+        
         var request = URLRequest(url: baseURL)
         request.httpMethod = HTTPMethod.get.rawValue
         request.addValue("Ocp-Apim-Subscription-Key", forHTTPHeaderField: "e858b807cfa14840b026e5dc9f6f21a1")
@@ -64,7 +66,6 @@ class HomePageController {
             
         }.resume()
     }
-    
 }
 
 
