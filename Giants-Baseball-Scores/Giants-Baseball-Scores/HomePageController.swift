@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class HomePageController {
     
     //MARK: - Properties
@@ -58,9 +56,7 @@ class HomePageController {
                 let schedule = try self.jsonDecoder.decode([Schedule].self, from: data)
                 
                 // Somewhere that the user has specified which day to look for
-                
-                
-                
+               
                 completion(.success(schedule))
             } catch {
                 print("Error decoding Schedule: \(error)")

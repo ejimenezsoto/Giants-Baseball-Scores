@@ -28,6 +28,7 @@ class GameViewController: UIViewController {
             }
         }
     }
+    
     // Home Team Labels
     @IBOutlet weak var homeImageView: UIImageView!
     @IBOutlet weak var homeStandingsLabel: UILabel!
@@ -44,37 +45,60 @@ class GameViewController: UIViewController {
     
     
     @IBAction func tapdayBeforeButton(_ sender: UIButton) {
-         if let dayBefore = Calendar.current.date(byAdding: .day, value: -1, to: date) {
-             date = dayBefore
-             let dateFormatter = DateFormatter()
-             dateFormatter.dateFormat = "E, MMM d"
-             
-             let dateString = dateFormatter.string(from: dayBefore)
-             dateTitleLabel.text = dateString
-             dateTitleLabel.sizeToFit()
-             searchDateString = formatDate(date: date)
-         }
-     }
-     
+        if let dayBefore = Calendar.current.date(byAdding: .day, value: -1, to: date) {
+            date = dayBefore
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "E, MMM d"
+            
+            let dateString = dateFormatter.string(from: dayBefore)
+            dateTitleLabel.text = dateString
+            dateTitleLabel.sizeToFit()
+            searchDateString = formatDate(date: date)
+        }
+    }
+    
     @IBAction func tapNextDayButton(_ sender: UIButton) {
-         if let nextDay = Calendar.current.date(byAdding: .day, value: 1, to: date) {
-             date = nextDay
-             let dateFormatter = DateFormatter()
-             dateFormatter.dateFormat = "E, MMM d"
-             
-             let dateString = dateFormatter.string(from: nextDay)
-             dateTitleLabel.text = dateString
-             dateTitleLabel.sizeToFit()
-             searchDateString = formatDate(date: date)
-         }
-     }
-
+        if let nextDay = Calendar.current.date(byAdding: .day, value: 1, to: date) {
+            date = nextDay
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "E, MMM d"
+            
+            let dateString = dateFormatter.string(from: nextDay)
+            dateTitleLabel.text = dateString
+            dateTitleLabel.sizeToFit()
+            searchDateString = formatDate(date: date)
+        }
+    }
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         homePageController.fetchGiantsSchedule { (result) in
-            print(result)
+            
+            
+            
+            switch result {
+                
+            case .success(_):
+                
+                
+                let homeTeamName = self.game?.homeTeamName
+                let awayTeamName = self.game?.awayTeamName
+                print(homeTeamName)
+                print(awayTeamName)
+                
+                DispatchQueue.main.async {
+                    if homeTeamName == "SF", self.game?.datetime == self.date {
+                        self.homeTeamNameLabel.text = homeTeamName
+                    } else {
+                        self.awayTeamNameLabel.text = awayTeamName
+                    }
+                }
+                
+            case .failure(_):
+                fatalError()
+            }
         }
-        
     }
     
     private func formatDate(date: Date) -> String {
@@ -83,9 +107,4 @@ class GameViewController: UIViewController {
         let dateString = dateFormatter.string(from: date)
         return dateString
     }
-    
- 
-    
-    
-    
 }

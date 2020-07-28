@@ -11,7 +11,11 @@ import Foundation
 
 //MARK:  https://api.sportsdata.io/v3/mlb/scores/json/Games/2020
 
-struct Schedule: Decodable {
+struct Schedule: Decodable, Equatable {
+    static func == (lhs: Schedule, rhs: Schedule) -> Bool {
+        return lhs.homeTeamName == rhs.awayTeamName
+    }
+    
     // Properties
     var datetime: Date
     var homeTeamName: String
