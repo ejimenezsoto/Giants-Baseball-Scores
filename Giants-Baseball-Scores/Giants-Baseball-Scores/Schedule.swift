@@ -21,21 +21,28 @@ struct Schedule: Decodable {
     var stadium: Stadium?
     
     private enum ScheduleCodingKeys: String, CodingKey {
-        case DateTime, HomeTeam, AwayTeam, StadiumID, HomeTeamRuns, AwayTeamRuns
+        typealias RawValue = String
+        
+        case datetime = "DateTime"
+        case homeTeamName = "HomeTeam"
+        case awayTeamName = "AwayTeam"
+        case stadium = "StadiumID"
+        case homeTeamRuns = "HomeTeamRuns"
+        case awayTeamRuns = "AwayTeamRuns"
         
     }
 
     init(from decoder: Decoder, datetime: Date) throws {
         
         let container = try decoder.container(keyedBy: ScheduleCodingKeys.self)
-        let datetime = try container.decode(String.self, forKey: .DateTime)
-        let HomeTeam = try container.decode(String.self, forKey: .HomeTeam)
-        let AwayTeam = try container.decode(String.self, forKey: .AwayTeam)
-        let HomeTeamRuns = try container.decode(Int.self, forKey: .HomeTeamRuns)
-        let AwayTeamRuns = try container.decode(Int.self, forKey: .AwayTeamRuns)
+        let DateTime = try container.decode(String.self, forKey: .datetime)
+        let HomeTeam = try container.decode(String.self, forKey: .homeTeamName)
+        let AwayTeam = try container.decode(String.self, forKey: .awayTeamName)
+        let HomeTeamRuns = try container.decode(Int.self, forKey: .homeTeamRuns)
+        let AwayTeamRuns = try container.decode(Int.self, forKey: .awayTeamRuns)
         
         
-        self.datetime = datetime
+        self.datetime = DateTime
         self.homeTeamName = HomeTeam
         self.awayTeamName = AwayTeam
         self.homeTeamRuns = HomeTeamRuns

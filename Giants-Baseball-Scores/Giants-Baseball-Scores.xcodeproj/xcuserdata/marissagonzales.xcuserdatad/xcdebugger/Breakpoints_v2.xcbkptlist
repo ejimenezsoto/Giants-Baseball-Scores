@@ -7,15 +7,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A1DFB165-8416-4164-92D9-F617DE0C69EA"
+            uuid = "9DC1AA0A-C9A8-4974-83C1-DEC2FD245856"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Giants-Baseball-Scores/HomePageController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "fetchGiantsSchedule(completion:)"
             landmarkType = "7">
          </BreakpointContent>
