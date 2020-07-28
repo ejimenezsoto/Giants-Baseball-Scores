@@ -11,7 +11,7 @@ import Foundation
 
 //MARK:  https://api.sportsdata.io/v3/mlb/scores/json/GamesByDate/{date}
 
-struct Game: Decodable, Encodable {
+struct Schedule: Decodable, Encodable {
     
     var day: Date
     var gameID: Int32
