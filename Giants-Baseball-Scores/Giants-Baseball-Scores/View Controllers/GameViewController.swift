@@ -10,6 +10,10 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    // Homepage Controller temporary instance
+//    var homePageController = HomePageController()
+    
+    var game: Schedule?
     private var date = Date()
     private var searchDateString = ""
     
@@ -71,6 +75,11 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        homePageController.fetchGamesInfo { (result) in
+//            let game = game else { return }
+//            
+//            
+//        }
         
        
     }

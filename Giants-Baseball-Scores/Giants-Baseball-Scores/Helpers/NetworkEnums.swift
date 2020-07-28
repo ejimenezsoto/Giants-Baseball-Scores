@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+enum NetworkError: Error {
+    case noData, badDecode
+}
+
+enum HTTPMethod: String {
+    case get = "GET"
+}
