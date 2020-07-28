@@ -20,13 +20,13 @@ class HomePageController {
     
     private lazy var jsonDecoder: JSONDecoder = {
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .iso8601
+        decoder.dateDecodingStrategy = .formatted(HomePageController.dateFormatter)
         return decoder
     }()
     
     static var dateFormatter: DateFormatter {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         return dateFormatter
     }
     
@@ -34,7 +34,7 @@ class HomePageController {
         
         var request = URLRequest(url: baseURL)
         request.httpMethod = HTTPMethod.get.rawValue
-        request.addValue("Ocp-Apim-Subscription-Key", forHTTPHeaderField: "e858b807cfa14840b026e5dc9f6f21a1")
+        request.addValue("e858b807cfa14840b026e5dc9f6f21a1", forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             
@@ -56,6 +56,11 @@ class HomePageController {
             
             do {
                 let schedule = try self.jsonDecoder.decode([Schedule].self, from: data)
+                
+                // Somewhere that the user has specified which day to look for
+                
+                
+                
                 completion(.success(schedule))
             } catch {
                 print("Error decoding Schedule: \(error)")

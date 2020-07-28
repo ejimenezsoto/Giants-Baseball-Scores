@@ -13,7 +13,7 @@ import Foundation
 
 struct Schedule: Decodable {
     // Properties
-    var datetime: String
+    var datetime: Date
     var homeTeamName: String
     var awayTeamName: String
     var homeTeamRuns: Int?
@@ -21,7 +21,6 @@ struct Schedule: Decodable {
     var stadium: Stadium?
     
     private enum ScheduleCodingKeys: String, CodingKey {
-        typealias RawValue = String
         
         case datetime = "DateTime"
         case homeTeamName = "HomeTeam"
@@ -29,18 +28,16 @@ struct Schedule: Decodable {
         case stadium = "StadiumID"
         case homeTeamRuns = "HomeTeamRuns"
         case awayTeamRuns = "AwayTeamRuns"
-        
     }
 
-    init(from decoder: Decoder, datetime: Date) throws {
+    init(from decoder: Decoder) throws {
         
         let container = try decoder.container(keyedBy: ScheduleCodingKeys.self)
-        let DateTime = try container.decode(String.self, forKey: .datetime)
+        let DateTime = try container.decode(Date.self, forKey: .datetime)
         let HomeTeam = try container.decode(String.self, forKey: .homeTeamName)
         let AwayTeam = try container.decode(String.self, forKey: .awayTeamName)
-        let HomeTeamRuns = try container.decode(Int.self, forKey: .homeTeamRuns)
-        let AwayTeamRuns = try container.decode(Int.self, forKey: .awayTeamRuns)
-        
+        let HomeTeamRuns = try container.decodeIfPresent(Int.self, forKey: .homeTeamRuns)
+        let AwayTeamRuns = try container.decodeIfPresent(Int.self, forKey: .awayTeamRuns)
         
         self.datetime = DateTime
         self.homeTeamName = HomeTeam
