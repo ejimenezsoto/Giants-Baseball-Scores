@@ -11,9 +11,10 @@ import UIKit
 class GameViewController: UIViewController {
     
     // Homepage Controller temporary instance
-    let homePageController = GameController()
+    let gameController = GameController()
     
-    var game: Game?
+    // Properties
+    var giantsGames: [Game] = []
     private var date = Date()
     private var searchDateString = ""
     
@@ -43,7 +44,6 @@ class GameViewController: UIViewController {
     @IBOutlet weak var gameScoreLabel: UILabel!
     @IBOutlet weak var stadiumButton: UIButton!
     
-    
     @IBAction func tapdayBeforeButton(_ sender: UIButton) {
         if let dayBefore = Calendar.current.date(byAdding: .day, value: -1, to: date) {
             date = dayBefore
@@ -67,26 +67,30 @@ class GameViewController: UIViewController {
             dateTitleLabel.text = dateString
             dateTitleLabel.sizeToFit()
             searchDateString = formatDate(date: date)
+            print(searchDateString)
         }
     }
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        homePageController.fetchGiantsSchedule { (result) in
+        gameController.fetchGiantsSchedule { (result) in
+            print(self.gameController.gotDamnGiantsGames)
+            self.giantsGames = self.gameController.gotDamnGiantsGames
+            let giantsAwayGames = self.giantsGames.filter { $0.awayTeamName == "SF"}
+            let giantsHomeGames = self.giantsGames.filter { $0.homeTeamName == "SF"}
             
-            var game: Game?
+            let allGiantsGames = giantsAwayGames + giantsHomeGames
             
-            guard let todaysGame = game else { return }
+//            let filteredGames = allGiantsGames.filter { }
             
             
-
         }
+ 
     }
     
     private func formatDate(date: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         let dateString = dateFormatter.string(from: date)
         return dateString
     }
