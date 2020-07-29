@@ -74,13 +74,10 @@ class GameViewController: UIViewController {
         
         super.viewDidLoad()
         homePageController.fetchGiantsSchedule { (result) in
-            
-            var game: Game?
-            
-            guard let todaysGame = game else { return }
-            
-            
-
+//            guard self.game != nil else { return }
+//
+//            self.awayTeamNameLabel.text = self.game?.awayTeamName     <----- HUH?????
+//            self.homeTeamNameLabel.text = self.game?.homeTeamName
         }
     }
     
