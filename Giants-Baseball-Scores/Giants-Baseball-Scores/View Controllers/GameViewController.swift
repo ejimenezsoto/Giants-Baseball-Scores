@@ -70,9 +70,12 @@ class GameViewController: UIViewController {
             print(searchDateString)
             viewDidLoad()
             
+            
         }
     }
     var filteredGames = [Game]()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,10 +93,14 @@ class GameViewController: UIViewController {
             
             self.filteredGames = filterDateGiantsGames
             
-      
             print(self.filteredGames)
             
-            
+            DispatchQueue.main.async {
+                
+            self.homeTeamNameLabel.text = self.filteredGames.first?.homeTeamName
+                self.awayTeamNameLabel.text = self.filteredGames.first?.awayTeamName
+
+            }
           
             
         }
