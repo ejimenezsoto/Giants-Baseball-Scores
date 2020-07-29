@@ -59,7 +59,7 @@ class GameViewController: UIViewController {
             dateTitleLabel.text = dateString
             dateTitleLabel.sizeToFit()
             searchDateString = formatDate(date: date)
-            viewDidLoad()
+            updateViews()
         }
     }
     
@@ -74,7 +74,7 @@ class GameViewController: UIViewController {
             dateTitleLabel.sizeToFit()
             searchDateString = formatDate(date: date)
             print(searchDateString)
-            viewDidLoad()
+            updateViews()
             
             
         }
@@ -83,10 +83,17 @@ class GameViewController: UIViewController {
     
     var noGamesOnDayArray = ["2020-07-22T00:00:00", "2020-07-27T00:00:00", "2020-08-13T00:00:00","2020-08-24T00:00:00","2020-08-31T00:00:00", "2020-09-03T00:00:00", "2020-09-14T00:00:00","2020-09-17T00:00:00","2020-09-28T00:00:00", "2020-09-29T00:00:00", "2020-09-30T00:00:00"]
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        updateViews()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+            updateViews()
+    }
+    
+    func updateViews() {
         
         if noGamesOnDayArray.contains(searchDateString) {
             self.homeImageView.isHidden = true
@@ -188,15 +195,16 @@ class GameViewController: UIViewController {
                     let gameRuns = "\(homeTeamRuns ?? 0) - \(awayTeamRuns ?? 0)"
                     
                     self.gameScoreLabel.text = gameRuns
+                    
                     self.homeImageView.isHidden = false
-                               self.homeTeamNameLabel.isHidden = false
-                               self.gameScoreLabel.isHidden = false
-                               self.homeLabel.isHidden = false
-                               self.scoreLabel.isHidden = false
-                               self.awayLabel.isHidden = false
-                               self.awayImageView.isHidden = false
-                               self.awayTeamNameLabel.isHidden = false
-                               self.stadiumButton.isHidden = false
+                    self.homeTeamNameLabel.isHidden = false
+                    self.gameScoreLabel.isHidden = false
+                    self.homeLabel.isHidden = false
+                    self.scoreLabel.isHidden = false
+                    self.awayLabel.isHidden = false
+                    self.awayImageView.isHidden = false
+                    self.awayTeamNameLabel.isHidden = false
+                    self.stadiumButton.isHidden = false
                     
                     self.noGamesLabel.isHidden = true
                     
