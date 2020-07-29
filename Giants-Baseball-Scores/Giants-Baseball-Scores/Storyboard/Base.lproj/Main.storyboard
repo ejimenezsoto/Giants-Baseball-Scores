@@ -26,7 +26,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxL-Ih-ARu" userLabel="Day Before Button">
                                         <rect key="frame" x="0.0" y="30" width="12.5" height="30.5"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="chevron.left" catalog="system"/>
                                         <connections>
                                             <action selector="tapdayBeforeButton:" destination="HTK-SF-eq4" eventType="touchUpInside" id="I1V-2I-HkJ"/>
@@ -35,7 +35,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxX-Zk-hR0" userLabel="Next Day Button">
                                         <rect key="frame" x="261.5" y="30" width="12.5" height="30.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="chevron.right" catalog="system"/>
                                         <connections>
                                             <action selector="tapNextDayButton:" destination="HTK-SF-eq4" eventType="touchUpInside" id="Yb5-rY-Df6"/>
