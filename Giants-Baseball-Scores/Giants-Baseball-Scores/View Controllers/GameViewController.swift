@@ -54,7 +54,6 @@ class GameViewController: UIViewController {
             dateTitleLabel.text = dateString
             dateTitleLabel.sizeToFit()
             searchDateString = formatDate(date: date)
-            updateView()
         }
     }
     
@@ -69,15 +68,33 @@ class GameViewController: UIViewController {
             dateTitleLabel.sizeToFit()
             searchDateString = formatDate(date: date)
             print(searchDateString)
-            updateView()
+            viewDidLoad()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         gameController.fetchGiantsSchedule { (result) in
-                    
-                }
+            
+            self.giantsGames = self.gameController.gotDamnGiantsGames
+            let giantsAwayGames = self.giantsGames.filter { $0.awayTeamName == "SF"}
+            let giantsHomeGames = self.giantsGames.filter { $0.homeTeamName == "SF"}
+            
+            let allGiantsGames = giantsAwayGames + giantsHomeGames
+            
+            
+            
+            let filterDateGiantsGames = allGiantsGames.filter { $0.day == self.searchDateString }
+            
+            //"2020-07-23T00:00:00"
+            
+            print(FilterDateGiantsGames)
+            
+//            let filteredGames = allGiantsGames.filter { }
+            
+            
+            
+        }
  
     }
     
@@ -87,29 +104,5 @@ class GameViewController: UIViewController {
         let endOfDateString = "T00:00:00"
         let dateString = dateFormatter.string(from: date) + endOfDateString
         return dateString
-    }
-    
-    
-    func updateView() {
-        gameController.fetchGiantsSchedule { (result) in
-                    print(self.gameController.gotDamnGiantsGames)
-                    self.giantsGames = self.gameController.gotDamnGiantsGames
-                    let giantsAwayGames = self.giantsGames.filter { $0.awayTeamName == "SF"}
-                    let giantsHomeGames = self.giantsGames.filter { $0.homeTeamName == "SF"}
-                    
-                    let allGiantsGames = giantsAwayGames + giantsHomeGames
-                    
-                    print(allGiantsGames)
-                    
-                    let dilterDateGiantsGames = allGiantsGames.filter { $0.day == self.searchDateString }
-                    
-                    //"2020-07-23T00:00:00"
-                    
-                    print(dilterDateGiantsGames)
-                    
-        //            let filteredGames = allGiantsGames.filter { }
-                    
-                    
-                }
     }
 }
