@@ -69,6 +69,7 @@ class GameViewController: UIViewController {
             searchDateString = formatDate(date: date)
             print(searchDateString)
             viewDidLoad()
+            
         }
     }
     var filteredGames = [Game]()
@@ -83,19 +84,17 @@ class GameViewController: UIViewController {
             
             let allGiantsGames = giantsAwayGames + giantsHomeGames
             
-            
-            
             let filterDateGiantsGames = allGiantsGames.filter { $0.day == self.searchDateString }
-            print(filterDateGiantsGames)
-            
-            self.filteredGames = filterDateGiantsGames
-            //"2020-07-23T00:00:00"
-            
             //print(filterDateGiantsGames)
             
-//            let filteredGames = allGiantsGames.filter { }
-            let hometeam = self.gameController.gotDamnGiantsGames.filter { $0.homeTeamName == "SF" }
-            print(hometeam)
+            
+            self.filteredGames = filterDateGiantsGames
+            
+      
+            print(self.filteredGames)
+            
+            
+          
             
         }
  

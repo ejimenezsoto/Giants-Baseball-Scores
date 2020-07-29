@@ -59,6 +59,8 @@ class GameController {
                 let giantsHomeGames = games.filter {$0.homeTeamName == "SF" }
                 let giantsAwayGames = games.filter { $0.awayTeamName == "SF" }
                 let allGiantsGames = giantsAwayGames + giantsHomeGames
+                
+                self.gotDamnGiantsGames.removeAll()
                 self.gotDamnGiantsGames.append(contentsOf: allGiantsGames)
 //                print(allGiantsGames)
                 
