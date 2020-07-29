@@ -13,6 +13,7 @@ class GameViewController: UIViewController {
     // Homepage Controller temporary instance
     let gameController = GameController()
     
+    
     // Properties
     var giantsGames: [Game] = []
     private var date = Date()
@@ -54,6 +55,7 @@ class GameViewController: UIViewController {
             dateTitleLabel.text = dateString
             dateTitleLabel.sizeToFit()
             searchDateString = formatDate(date: date)
+            viewDidLoad()
         }
     }
     
@@ -97,16 +99,81 @@ class GameViewController: UIViewController {
             
             DispatchQueue.main.async {
                 
-            self.homeTeamNameLabel.text = self.filteredGames.first?.homeTeamName
+                self.homeTeamNameLabel.text = self.filteredGames.first?.homeTeamName
                 self.awayTeamNameLabel.text = self.filteredGames.first?.awayTeamName
-
-            }
-          
-            
+                
+                if self.filteredGames.first?.homeTeamName == "SF" {
+                    self.homeImageView.image = UIImage(named: "San Francisco Giants")
+                }
+                if self.filteredGames.first?.homeTeamName == "LAD" {
+                    self.homeImageView.image = UIImage(named: "Los Angeles Dodgers")
+                }
+                if self.filteredGames.first?.homeTeamName == "SD" {
+                    self.homeImageView.image = UIImage(named: "San Diego Padres")
+                }
+                if self.filteredGames.first?.homeTeamName == "TEX" {
+                    self.homeImageView.image = UIImage(named: "Texas Rangers")
+                }
+                if self.filteredGames.first?.homeTeamName == "COL" {
+                    self.homeImageView.image = UIImage(named: "Colorado Rockies")
+                }
+                if self.filteredGames.first?.homeTeamName == "HOU" {
+                    self.homeImageView.image = UIImage(named: "Houston Astros")
+                }
+                if self.filteredGames.first?.homeTeamName == "OAK" {
+                    self.homeImageView.image = UIImage(named: "Oakland Athletic")
+                }
+                if self.filteredGames.first?.homeTeamName == "LAA" {
+                    self.homeImageView.image = UIImage(named: "Los Angeles Angels")
+                }
+                if self.filteredGames.first?.homeTeamName == "ARI" {
+                    self.homeImageView.image = UIImage(named: "Arizona Diamondbacks")
+                }
+                if self.filteredGames.first?.homeTeamName == "SEA" {
+                    self.homeImageView.image = UIImage(named: "Seattle Mariners")
+                }
+                if self.filteredGames.first?.awayTeamName == "SF" {
+                    self.awayImageView.image = UIImage(named: "San Francisco Giants")
+                }
+                if self.filteredGames.first?.awayTeamName == "LAD" {
+                    self.awayImageView.image = UIImage(named: "Los Angeles Dodgers")
+                }
+                if self.filteredGames.first?.awayTeamName == "SD" {
+                    self.awayImageView.image = UIImage(named: "San Diego Padres")
+                }
+                if self.filteredGames.first?.awayTeamName == "TEX" {
+                    self.awayImageView.image = UIImage(named: "Texas Rangers")
+                }
+                if self.filteredGames.first?.awayTeamName == "COL" {
+                    self.awayImageView.image = UIImage(named: "Colorado Rockies")
+                }
+                if self.filteredGames.first?.awayTeamName == "HOU" {
+                    self.awayImageView.image = UIImage(named: "Houston Astros")
+                }
+                if self.filteredGames.first?.awayTeamName == "OAK" {
+                    self.awayImageView.image = UIImage(named: "Oakland Athletic")
+                }
+                if self.filteredGames.first?.awayTeamName == "LAA" {
+                    self.awayImageView.image = UIImage(named: "Los Angeles Angels")
+                }
+                if self.filteredGames.first?.awayTeamName == "ARI" {
+                    self.awayImageView.image = UIImage(named: "Arizona Diamondbacks")
+                }
+                if self.filteredGames.first?.awayTeamName == "SEA" {
+                    self.awayImageView.image = UIImage(named: "Seattle Mariners")
+                }
+                
+              let homeTeamRuns = self.filteredGames.first?.homeTeamRuns
+                let awayTeamRuns = self.filteredGames.first?.awayTeamRuns
+               
+                let gameRuns = "\(homeTeamRuns ?? 0) - \(awayTeamRuns ?? 0)"
+                
+                self.gameScoreLabel.text = gameRuns
+                
+                print(gameRuns)
         }
- 
     }
-    
+    }
     private func formatDate(date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"

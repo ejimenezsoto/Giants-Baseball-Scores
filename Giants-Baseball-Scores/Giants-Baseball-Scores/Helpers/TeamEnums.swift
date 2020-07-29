@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Team: String, Decodable {
+enum Team: String {
     
     // MARK: Fuck This enum
     case LAD = "Los Angeles Dodgers"
