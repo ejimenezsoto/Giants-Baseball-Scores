@@ -16,16 +16,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQg-lA-NyB">
-                                <rect key="frame" x="70" y="44" width="274" height="90"/>
+                                <rect key="frame" x="70" y="44" width="274" height="90.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4f-XB-WGN" userLabel="Date Title Label">
-                                        <rect key="frame" x="103" y="30.5" width="68" height="29"/>
+                                        <rect key="frame" x="103" y="31" width="68" height="29"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxL-Ih-ARu" userLabel="Day Before Button">
-                                        <rect key="frame" x="0.0" y="30" width="12.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="30" width="12.5" height="30.5"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="chevron.left" catalog="system"/>
                                         <connections>
@@ -33,7 +33,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxX-Zk-hR0" userLabel="Next Day Button">
-                                        <rect key="frame" x="261.5" y="30" width="12.5" height="30"/>
+                                        <rect key="frame" x="261.5" y="30" width="12.5" height="30.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="chevron.right" catalog="system"/>
@@ -57,50 +57,26 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kFG-cY-kh5" userLabel="Home Image View">
-                                <rect key="frame" x="0.0" y="161" width="124" height="124"/>
+                                <rect key="frame" x="0.0" y="172" width="124" height="124"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="124" id="OAk-la-CHR"/>
                                     <constraint firstAttribute="width" constant="124" id="R3M-90-e5Z"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3F9-ug-T3T" userLabel="Away Image View">
-                                <rect key="frame" x="289.5" y="161" width="124" height="124"/>
+                                <rect key="frame" x="290" y="172" width="124" height="124"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="124" id="vab-7e-RVz"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWh-fN-Pei" userLabel="Home Label">
-                                <rect key="frame" x="39" y="132" width="46" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAo-va-TwH" userLabel="Away Label">
-                                <rect key="frame" x="331" y="132.5" width="40" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZw-PP-2IC" userLabel="Home Standings Label">
-                                <rect key="frame" x="132" y="212.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rJ-ic-Kcn" userLabel="Away Standings Label">
-                                <rect key="frame" x="239.5" y="212.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="323" y="137.5" width="58" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dQ-iT-ff3" userLabel="Home Team Name Label">
-                                <rect key="frame" x="41" y="293" width="42" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lha-ko-SQx" userLabel="Away Team Name Label">
-                                <rect key="frame" x="330.5" y="293" width="42" height="20.5"/>
+                                <rect key="frame" x="41" y="304" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -118,8 +94,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrn-iR-T0x" userLabel="Game Score Label">
-                                <rect key="frame" x="178.5" y="258.5" width="57" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrn-iR-T0x" userLabel="Game Score Label">
+                                <rect key="frame" x="179" y="269.5" width="56.5" height="26.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26.5" id="Xwf-tN-rOc"/>
                                 </constraints>
@@ -127,39 +103,59 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWh-fN-Pei" userLabel="Home Label">
+                                <rect key="frame" x="29" y="137" width="66" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0VC-EE-O0a">
+                                <rect key="frame" x="144" y="221.5" width="126" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lha-ko-SQx" userLabel="Away Team Name Label">
+                                <rect key="frame" x="330" y="304" width="58" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="3F9-ug-T3T" firstAttribute="leading" secondItem="6rJ-ic-Kcn" secondAttribute="trailing" constant="8" id="12h-vH-A5G"/>
-                            <constraint firstItem="ZWh-fN-Pei" firstAttribute="baseline" secondItem="aAo-va-TwH" secondAttribute="baseline" id="20s-3n-DBm"/>
-                            <constraint firstItem="kFG-cY-kh5" firstAttribute="centerY" secondItem="6rJ-ic-Kcn" secondAttribute="centerY" id="3WT-hj-7Gl"/>
+                            <constraint firstItem="ZWh-fN-Pei" firstAttribute="baseline" secondItem="aAo-va-TwH" secondAttribute="baseline" constant="-0.5" id="20s-3n-DBm"/>
                             <constraint firstItem="sQg-lA-NyB" firstAttribute="top" secondItem="h6E-tE-r7J" secondAttribute="top" id="5kN-YV-HY8"/>
+                            <constraint firstItem="3F9-ug-T3T" firstAttribute="top" secondItem="aAo-va-TwH" secondAttribute="bottom" constant="8" symbolic="YES" id="9SZ-Jj-rL4"/>
                             <constraint firstItem="rrn-iR-T0x" firstAttribute="centerX" secondItem="sQg-lA-NyB" secondAttribute="centerX" id="9Zc-vi-fdC"/>
                             <constraint firstItem="kFG-cY-kh5" firstAttribute="bottom" secondItem="rrn-iR-T0x" secondAttribute="bottom" id="C49-5t-J64"/>
-                            <constraint firstItem="kFG-cY-kh5" firstAttribute="top" secondItem="ZWh-fN-Pei" secondAttribute="bottom" constant="8" symbolic="YES" id="CH1-Sm-Bqh"/>
                             <constraint firstItem="h6E-tE-r7J" firstAttribute="trailing" secondItem="JIg-r3-sho" secondAttribute="trailing" constant="145.5" id="DW1-Pc-IqI"/>
-                            <constraint firstItem="rrn-iR-T0x" firstAttribute="top" secondItem="QZw-PP-2IC" secondAttribute="bottom" constant="25" id="Ecy-gN-NIP"/>
-                            <constraint firstItem="QZw-PP-2IC" firstAttribute="leading" secondItem="kFG-cY-kh5" secondAttribute="trailing" constant="8" id="GPU-aT-G9i"/>
                             <constraint firstItem="JIg-r3-sho" firstAttribute="leading" secondItem="h6E-tE-r7J" secondAttribute="leading" constant="146" id="GPl-f0-g9J"/>
-                            <constraint firstItem="QZw-PP-2IC" firstAttribute="baseline" secondItem="6rJ-ic-Kcn" secondAttribute="baseline" id="Jzx-Yy-dEQ"/>
+                            <constraint firstItem="rrn-iR-T0x" firstAttribute="centerX" secondItem="0VC-EE-O0a" secondAttribute="centerX" id="JfL-88-N2l"/>
                             <constraint firstItem="ZWh-fN-Pei" firstAttribute="centerX" secondItem="0dQ-iT-ff3" secondAttribute="centerX" id="KFb-aT-0IS"/>
                             <constraint firstItem="lha-ko-SQx" firstAttribute="top" secondItem="3F9-ug-T3T" secondAttribute="bottom" constant="8" symbolic="YES" id="KiW-j6-F8Y"/>
-                            <constraint firstItem="h6E-tE-r7J" firstAttribute="trailing" secondItem="aAo-va-TwH" secondAttribute="trailing" constant="43" id="Ntf-vk-RHc"/>
+                            <constraint firstItem="lha-ko-SQx" firstAttribute="centerX" secondItem="3F9-ug-T3T" secondAttribute="centerX" constant="7" id="L68-O9-CHE"/>
+                            <constraint firstItem="h6E-tE-r7J" firstAttribute="trailing" secondItem="aAo-va-TwH" secondAttribute="trailing" constant="33" id="Ntf-vk-RHc"/>
                             <constraint firstItem="sQg-lA-NyB" firstAttribute="leading" secondItem="h6E-tE-r7J" secondAttribute="leading" constant="70" id="O87-Bv-Wxg"/>
                             <constraint firstItem="kFG-cY-kh5" firstAttribute="bottom" secondItem="3F9-ug-T3T" secondAttribute="bottom" id="QAh-14-rTo"/>
                             <constraint firstItem="h6E-tE-r7J" firstAttribute="bottom" secondItem="JIg-r3-sho" secondAttribute="bottom" constant="185" id="SHm-Tc-mnj"/>
                             <constraint firstItem="0dQ-iT-ff3" firstAttribute="top" secondItem="kFG-cY-kh5" secondAttribute="bottom" constant="8" symbolic="YES" id="T32-WM-xOy"/>
-                            <constraint firstItem="3F9-ug-T3T" firstAttribute="top" secondItem="cYP-4K-ede" secondAttribute="top" constant="161" id="U9O-IE-IZg"/>
-                            <constraint firstItem="ZWh-fN-Pei" firstAttribute="top" secondItem="h6E-tE-r7J" secondAttribute="top" constant="88" id="Uyx-0g-LVI"/>
-                            <constraint firstItem="ZWh-fN-Pei" firstAttribute="leading" secondItem="h6E-tE-r7J" secondAttribute="leading" constant="39" id="awU-kF-9YO"/>
+                            <constraint firstItem="kFG-cY-kh5" firstAttribute="leading" secondItem="h6E-tE-r7J" secondAttribute="leading" id="T39-99-8LO"/>
+                            <constraint firstItem="ZWh-fN-Pei" firstAttribute="top" secondItem="h6E-tE-r7J" secondAttribute="top" constant="93" id="Uyx-0g-LVI"/>
+                            <constraint firstItem="3F9-ug-T3T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0VC-EE-O0a" secondAttribute="trailing" id="aZM-mK-xKH"/>
+                            <constraint firstItem="rrn-iR-T0x" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kFG-cY-kh5" secondAttribute="trailing" id="aac-Gp-zxI"/>
+                            <constraint firstItem="3F9-ug-T3T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rrn-iR-T0x" secondAttribute="trailing" id="adM-xP-vfe"/>
+                            <constraint firstItem="ZWh-fN-Pei" firstAttribute="leading" secondItem="h6E-tE-r7J" secondAttribute="leading" constant="29" id="awU-kF-9YO"/>
                             <constraint firstItem="kFG-cY-kh5" firstAttribute="top" secondItem="3F9-ug-T3T" secondAttribute="top" id="cIp-6c-F7G"/>
+                            <constraint firstItem="h6E-tE-r7J" firstAttribute="trailing" secondItem="3F9-ug-T3T" secondAttribute="trailing" id="dCh-gW-vgh"/>
+                            <constraint firstItem="0VC-EE-O0a" firstAttribute="leading" secondItem="kFG-cY-kh5" secondAttribute="trailing" constant="20" id="giU-lX-LFs"/>
                             <constraint firstItem="h6E-tE-r7J" firstAttribute="trailing" secondItem="sQg-lA-NyB" secondAttribute="trailing" constant="70" id="iqz-JY-lqC"/>
                             <constraint firstItem="kFG-cY-kh5" firstAttribute="centerX" secondItem="0dQ-iT-ff3" secondAttribute="centerX" id="jo9-az-h64"/>
-                            <constraint firstItem="aAo-va-TwH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lha-ko-SQx" secondAttribute="leading" id="lgj-BB-inX"/>
-                            <constraint firstItem="3F9-ug-T3T" firstAttribute="leading" secondItem="rrn-iR-T0x" secondAttribute="trailing" constant="54" id="nRP-Jz-hXU"/>
-                            <constraint firstItem="6rJ-ic-Kcn" firstAttribute="leading" secondItem="QZw-PP-2IC" secondAttribute="trailing" constant="65.5" id="pPO-h1-X3B"/>
-                            <constraint firstItem="kFG-cY-kh5" firstAttribute="centerY" secondItem="QZw-PP-2IC" secondAttribute="centerY" id="sGM-6D-uIS"/>
-                            <constraint firstItem="3F9-ug-T3T" firstAttribute="centerX" secondItem="lha-ko-SQx" secondAttribute="centerX" id="x98-tN-Pqg"/>
+                            <constraint firstItem="aAo-va-TwH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lha-ko-SQx" secondAttribute="leading" constant="-7" id="lgj-BB-inX"/>
+                            <constraint firstItem="0VC-EE-O0a" firstAttribute="top" secondItem="sQg-lA-NyB" secondAttribute="bottom" constant="87" id="u22-nd-Z2M"/>
+                            <constraint firstItem="3F9-ug-T3T" firstAttribute="centerX" secondItem="aAo-va-TwH" secondAttribute="centerX" id="uFJ-kW-hao"/>
+                            <constraint firstItem="rrn-iR-T0x" firstAttribute="top" secondItem="0VC-EE-O0a" secondAttribute="bottom" constant="21.5" id="uax-tL-x7k"/>
+                            <constraint firstItem="3F9-ug-T3T" firstAttribute="centerX" secondItem="lha-ko-SQx" secondAttribute="centerX" constant="-7" id="x98-tN-Pqg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h6E-tE-r7J"/>
                     </view>
@@ -167,13 +163,11 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="awayImageView" destination="3F9-ug-T3T" id="y8I-PW-B8J"/>
-                        <outlet property="awayStandingsLabel" destination="6rJ-ic-Kcn" id="dee-a3-ph8"/>
                         <outlet property="awayTeamNameLabel" destination="lha-ko-SQx" id="CMN-sw-ObU"/>
                         <outlet property="dateTitleLabel" destination="x4f-XB-WGN" id="P3O-uC-inl"/>
                         <outlet property="dayBeforeButton" destination="IxL-Ih-ARu" id="pqO-JN-THm"/>
                         <outlet property="gameScoreLabel" destination="rrn-iR-T0x" id="4Zi-ln-TID"/>
                         <outlet property="homeImageView" destination="kFG-cY-kh5" id="MIP-RN-mtw"/>
-                        <outlet property="homeStandingsLabel" destination="QZw-PP-2IC" id="o44-o5-7PB"/>
                         <outlet property="homeTeamNameLabel" destination="0dQ-iT-ff3" id="MeN-Qe-itH"/>
                         <outlet property="nextDayButton" destination="fxX-Zk-hR0" id="9Zr-22-flx"/>
                         <outlet property="stadiumButton" destination="epu-2L-tpC" id="Fes-iL-lZZ"/>
@@ -181,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugO-0p-Xfd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-34" y="180"/>
+            <point key="canvasLocation" x="-34.782608695652179" y="179.46428571428569"/>
         </scene>
         <!--Stadium View Controller-->
         <scene sceneID="eqZ-sw-xQr">
