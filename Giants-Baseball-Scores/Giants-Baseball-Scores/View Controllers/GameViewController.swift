@@ -71,6 +71,7 @@ class GameViewController: UIViewController {
             viewDidLoad()
         }
     }
+    var filteredGames = [Game]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,14 +86,16 @@ class GameViewController: UIViewController {
             
             
             let filterDateGiantsGames = allGiantsGames.filter { $0.day == self.searchDateString }
+            print(filterDateGiantsGames)
             
+            self.filteredGames = filterDateGiantsGames
             //"2020-07-23T00:00:00"
             
-            print(FilterDateGiantsGames)
+            //print(filterDateGiantsGames)
             
 //            let filteredGames = allGiantsGames.filter { }
-            
-            
+            let hometeam = self.gameController.gotDamnGiantsGames.filter { $0.homeTeamName == "SF" }
+            print(hometeam)
             
         }
  
