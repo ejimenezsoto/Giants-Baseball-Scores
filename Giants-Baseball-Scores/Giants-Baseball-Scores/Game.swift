@@ -48,6 +48,9 @@ struct Game: Decodable {
     }
 }
 
+struct Stadium: Decodable {
+    
+}
 
 
 

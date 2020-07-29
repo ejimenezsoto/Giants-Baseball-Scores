@@ -12,10 +12,9 @@ class GameController {
     
     //MARK: - Properties
     
-    var giantsDarnGames: [Game] = []
+    var gotDamnGiantsGames: [Game] = []
     
     private var baseURL = URL(string: "https://api.sportsdata.io/v3/mlb/scores/json/Games/2020")!
-    
     
     func fetchGiantsSchedule(completion: @escaping (Result<[Game], NetworkError>) -> Void) {
         
@@ -52,16 +51,15 @@ class GameController {
                 
                 let aDate = Dates.dateFromString("2020-07-23T22:00:00")
                 let bDate = Dates.dateFromString("2020-09-23T21:00:00")
-                let datesString = Dates.printDatesBetweenInterval(aDate, bDate)
+                let datesString = Dates.printDatesBetweenInterval(aDate, bDate) // <--- this prints out every date between the first and last game on the API
 //                print(datesString)
-                
-                
                 
                 
                 let games = try self.jsonDecoder.decode([Game].self, from: data)
                 let giantsHomeGames = games.filter {$0.homeTeamName == "SF" }
                 let giantsAwayGames = games.filter { $0.awayTeamName == "SF" }
                 let allGiantsGames = giantsAwayGames + giantsHomeGames
+                self.gotDamnGiantsGames.append(contentsOf: allGiantsGames)
 //                print(allGiantsGames)
                 
                 completion(.success(allGiantsGames))
