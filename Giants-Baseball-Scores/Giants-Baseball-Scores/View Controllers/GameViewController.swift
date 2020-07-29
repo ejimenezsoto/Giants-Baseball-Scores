@@ -11,9 +11,9 @@ import UIKit
 class GameViewController: UIViewController {
     
     // Homepage Controller temporary instance
-    let homePageController = HomePageController()
+    let homePageController = GameController()
     
-    var game: Schedule?
+    var game: Game?
     private var date = Date()
     private var searchDateString = ""
     
@@ -75,29 +75,6 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         homePageController.fetchGiantsSchedule { (result) in
             
-            
-            
-            switch result {
-                
-            case .success(_):
-                
-                
-                let homeTeamName = self.game?.homeTeamName
-                let awayTeamName = self.game?.awayTeamName
-                print(homeTeamName)
-                print(awayTeamName)
-                
-                DispatchQueue.main.async {
-                    if homeTeamName == "SF", self.game?.datetime == self.date {
-                        self.homeTeamNameLabel.text = homeTeamName
-                    } else {
-                        self.awayTeamNameLabel.text = awayTeamName
-                    }
-                }
-                
-            case .failure(_):
-                fatalError()
-            }
         }
     }
     

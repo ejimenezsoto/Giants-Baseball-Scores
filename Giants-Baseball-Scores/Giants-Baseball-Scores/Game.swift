@@ -46,9 +46,18 @@ struct Game: Decodable {
         self.awayTeamRuns = AwayTeamRuns
   
     }
+//    
+//    init?(json: [String: Any]) {
+//        guard let homeTeamJSON = json["HomeTeam"],
+//            let awayTeamJSON = json["AwayTeam"],
+//            let gameTimeJSON = json["DayTime"],
+//        let stadiumIDJSON = json["StadiumID"]  else { return nil }
+//       
+//      
+//    }
 }
 
-struct Stadium: Decodable {
+struct Stadium: Decodable, Hashable {
     
     var name: String
     var city: String
@@ -74,5 +83,8 @@ struct Stadium: Decodable {
         self.geoLat = geoLat
         self.geoLong = geoLong
     }
+    
+    
 }
+
 

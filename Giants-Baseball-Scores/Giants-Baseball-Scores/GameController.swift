@@ -8,17 +8,17 @@
 
 import UIKit
 
-class HomePageController {
+class GameController {
     
     //MARK: - Properties
     
-    var scheduledGames: Schedule?
+    var scheduledGame: Game?
     
     private var baseURL = URL(string: "https://api.sportsdata.io/v3/mlb/scores/json/Games/2020")!
     
     private lazy var jsonDecoder: JSONDecoder = {
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .formatted(HomePageController.dateFormatter)
+        decoder.dateDecodingStrategy = .formatted(GameController.dateFormatter)
         return decoder
     }()
     
@@ -28,7 +28,7 @@ class HomePageController {
         return dateFormatter
     }
     
-    func fetchGiantsSchedule(completion: @escaping (Result<[Schedule], NetworkError>) -> Void) {
+    func fetchGiantsSchedule(completion: @escaping (Result<[Game], NetworkError>) -> Void) {
         
         var request = URLRequest(url: baseURL)
         request.httpMethod = HTTPMethod.get.rawValue
@@ -53,9 +53,8 @@ class HomePageController {
             print(data)
             
             do {
-                let schedule = try self.jsonDecoder.decode([Schedule].self, from: data)
+                let schedule = try self.jsonDecoder.decode([Game].self, from: data)
                 
-                // Somewhere that the user has specified which day to look for
                
                 completion(.success(schedule))
             } catch {
