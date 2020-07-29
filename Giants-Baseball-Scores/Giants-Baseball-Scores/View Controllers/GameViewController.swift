@@ -75,6 +75,12 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         homePageController.fetchGiantsSchedule { (result) in
             
+            var game: Game?
+            
+            guard let todaysGame = game else { return }
+            
+            
+
         }
     }
     

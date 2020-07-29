@@ -19,7 +19,7 @@ struct Game: Decodable {
     var awayTeamName: String
     var homeTeamRuns: Int?
     var awayTeamRuns: Int?
-    var stadium: Stadium?
+//    var stadium: Stadium?
     
     private enum ScheduleCodingKeys: String, CodingKey {
         case datetime = "DateTime"
@@ -46,6 +46,37 @@ struct Game: Decodable {
         self.awayTeamRuns = AwayTeamRuns
   
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //    
 //    init?(json: [String: Any]) {
 //        guard let homeTeamJSON = json["HomeTeam"],
@@ -55,36 +86,36 @@ struct Game: Decodable {
 //       
 //      
 //    }
-}
 
-struct Stadium: Decodable, Hashable {
-    
-    var name: String
-    var city: String
-    var state: String
-    var geoLat: Double
-    var geoLong: Double
-    
-    enum StadiumCodingKeys: String, CodingKey {
-        case Name, City, State, GeoLat, GeoLong
-    }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: StadiumCodingKeys.self)
-        let name = try container.decode(String.self, forKey: .Name)
-        let city = try container.decode(String.self, forKey: .City)
-        let state = try container.decode(String.self, forKey: .State)
-        let geoLat = try container.decode(Double.self, forKey: .GeoLat)
-        let geoLong = try container.decode(Double.self, forKey: .GeoLong)
-        
-        self.name = name
-        self.city = city
-        self.state = state
-        self.geoLat = geoLat
-        self.geoLong = geoLong
-    }
-    
-    
-}
+//
+//struct Stadium: Decodable, Hashable {
+//
+//    var name: String
+//    var city: String
+//    var state: String
+//    var geoLat: Double
+//    var geoLong: Double
+//
+//    enum StadiumCodingKeys: String, CodingKey {
+//        case Name, City, State, GeoLat, GeoLong
+//    }
+//
+//    init(from decoder: Decoder) throws {
+//        let container = try decoder.container(keyedBy: StadiumCodingKeys.self)
+//        let name = try container.decode(String.self, forKey: .Name)
+//        let city = try container.decode(String.self, forKey: .City)
+//        let state = try container.decode(String.self, forKey: .State)
+//        let geoLat = try container.decode(Double.self, forKey: .GeoLat)
+//        let geoLong = try container.decode(Double.self, forKey: .GeoLong)
+//
+//        self.name = name
+//        self.city = city
+//        self.state = state
+//        self.geoLat = geoLat
+//        self.geoLong = geoLong
+//    }
+//
+//
+//}
 
 
