@@ -89,6 +89,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Stadium"/>
                                         <connections>
+                                            <action selector="stadiumButtonTapped:" destination="HTK-SF-eq4" eventType="touchUpInside" id="E2v-1n-uwx"/>
                                             <segue destination="E7L-jm-9Ha" kind="show" identifier="stadiumViewSegue" id="TMQ-Iu-NeF"/>
                                         </connections>
                                     </button>

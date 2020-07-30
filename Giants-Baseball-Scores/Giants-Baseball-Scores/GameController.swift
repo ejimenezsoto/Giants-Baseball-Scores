@@ -20,7 +20,7 @@ class GameController {
         
         var request = URLRequest(url: baseURL)
         request.httpMethod = HTTPMethod.get.rawValue
-        request.addValue("c750504d0e8049bc94816da5c6cf769c", forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
+        request.addValue("8b4ec0f54b78451a8d25366a0d05b793", forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             
@@ -37,7 +37,7 @@ class GameController {
                 
             }
             
-            //Dat Dat
+            
             guard let data = data else {
                 
                 completion(.failure(.noData))
@@ -47,14 +47,7 @@ class GameController {
             
             //Do This Please. 
             do {
-                
-                
-                let aDate = Dates.dateFromString("2020-07-23T22:00:00")
-                let bDate = Dates.dateFromString("2020-09-23T21:00:00")
-                let datesString = Dates.printDatesBetweenInterval(aDate, bDate) // <--- this prints out every date between the first and last game on the API
-//                print(datesString)
-                
-                
+         
                 let games = try self.jsonDecoder.decode([Game].self, from: data)
                 let giantsHomeGames = games.filter {$0.homeTeamName == "SF" }
                 let giantsAwayGames = games.filter { $0.awayTeamName == "SF" }
@@ -62,7 +55,6 @@ class GameController {
                 
                 self.gotDamnGiantsGames.removeAll()
                 self.gotDamnGiantsGames.append(contentsOf: allGiantsGames)
-//                print(allGiantsGames)
                 
                 completion(.success(allGiantsGames))
                 
