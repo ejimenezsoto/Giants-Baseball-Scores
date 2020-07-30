@@ -16,8 +16,6 @@ class StadiumViewController: UIViewController {
     var stadiumButtonTitle: String?
 
     let gameViewController = GameViewController()
-    
-
 
     override func viewDidLoad() {
         super.viewDidLoad()

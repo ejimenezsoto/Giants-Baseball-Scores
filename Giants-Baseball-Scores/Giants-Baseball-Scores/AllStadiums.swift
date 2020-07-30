@@ -28,9 +28,8 @@ struct Stadiums {
         self.geoLong = geoLong
     }
 }
-
  let sanFransiscoGiants = Stadiums(name: "Oracle Park Stadium", teamAbrv: "SF", geoLat: 37.778473, geoLong: 122.389595)
-
+    
 let losAngelesDodgers = Stadiums(name: "Dodger Stadium", teamAbrv: "LAD", geoLat: 34.072724, geoLong: -118.240646)
  
 let sanDiegoPadres = Stadiums(name: "PETCO Park", teamAbrv: "SD", geoLat: 32.707710, geoLong: -117.157097)
@@ -48,6 +47,5 @@ let losAngelesAngels = Stadiums(name: "Angel Stadium of Anaheim", teamAbrv: "LAA
 let arizonaDiamondbacks = Stadiums(name: "Chase Field", teamAbrv: "ARI", geoLat: 33.445526, geoLong: -112.066721)
 
 let seattleMariners = Stadiums(name: "T-Mobile Park", teamAbrv: "SEA", geoLat: 47.591358, geoLong: -122.332283)
-
 
 }
