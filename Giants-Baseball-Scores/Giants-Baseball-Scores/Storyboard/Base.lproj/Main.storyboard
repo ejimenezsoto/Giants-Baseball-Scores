@@ -82,10 +82,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="JIg-r3-sho">
-                                <rect key="frame" x="146" y="592" width="122.5" height="36"/>
+                                <rect key="frame" x="20" y="326" width="374" height="302"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epu-2L-tpC">
-                                        <rect key="frame" x="25" y="0.0" width="73" height="36"/>
+                                        <rect key="frame" x="20" y="0.0" width="334" height="302"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Stadium"/>
                                         <connections>
@@ -93,6 +93,12 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="epu-2L-tpC" secondAttribute="trailing" constant="20" id="7ZV-IQ-g18"/>
+                                    <constraint firstItem="epu-2L-tpC" firstAttribute="leading" secondItem="JIg-r3-sho" secondAttribute="leading" constant="20" id="7f1-YZ-Z9m"/>
+                                    <constraint firstItem="epu-2L-tpC" firstAttribute="leading" secondItem="JIg-r3-sho" secondAttribute="leading" constant="20" id="GDo-7Y-4oI"/>
+                                    <constraint firstAttribute="trailing" secondItem="epu-2L-tpC" secondAttribute="trailing" constant="20" id="UNA-0l-FQf"/>
+                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrn-iR-T0x" userLabel="Game Score Label">
                                 <rect key="frame" x="179" y="269.5" width="56.5" height="26.5"/>
@@ -121,16 +127,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Games Today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMH-DP-PIN">
+                                <rect key="frame" x="0.0" y="296" width="414" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ZWh-fN-Pei" firstAttribute="baseline" secondItem="aAo-va-TwH" secondAttribute="baseline" constant="-0.5" id="20s-3n-DBm"/>
                             <constraint firstItem="sQg-lA-NyB" firstAttribute="top" secondItem="h6E-tE-r7J" secondAttribute="top" id="5kN-YV-HY8"/>
                             <constraint firstItem="3F9-ug-T3T" firstAttribute="top" secondItem="aAo-va-TwH" secondAttribute="bottom" constant="8" symbolic="YES" id="9SZ-Jj-rL4"/>
+                            <constraint firstItem="BMH-DP-PIN" firstAttribute="top" secondItem="kFG-cY-kh5" secondAttribute="bottom" id="9YJ-7m-c9u"/>
                             <constraint firstItem="rrn-iR-T0x" firstAttribute="centerX" secondItem="sQg-lA-NyB" secondAttribute="centerX" id="9Zc-vi-fdC"/>
                             <constraint firstItem="kFG-cY-kh5" firstAttribute="bottom" secondItem="rrn-iR-T0x" secondAttribute="bottom" id="C49-5t-J64"/>
-                            <constraint firstItem="h6E-tE-r7J" firstAttribute="trailing" secondItem="JIg-r3-sho" secondAttribute="trailing" constant="145.5" id="DW1-Pc-IqI"/>
-                            <constraint firstItem="JIg-r3-sho" firstAttribute="leading" secondItem="h6E-tE-r7J" secondAttribute="leading" constant="146" id="GPl-f0-g9J"/>
+                            <constraint firstItem="JIg-r3-sho" firstAttribute="leading" secondItem="h6E-tE-r7J" secondAttribute="leading" constant="20" id="DLP-gt-PC2"/>
+                            <constraint firstItem="h6E-tE-r7J" firstAttribute="trailing" secondItem="JIg-r3-sho" secondAttribute="trailing" constant="20" id="Eyi-Kd-ACE"/>
                             <constraint firstItem="rrn-iR-T0x" firstAttribute="centerX" secondItem="0VC-EE-O0a" secondAttribute="centerX" id="JfL-88-N2l"/>
                             <constraint firstItem="ZWh-fN-Pei" firstAttribute="centerX" secondItem="0dQ-iT-ff3" secondAttribute="centerX" id="KFb-aT-0IS"/>
                             <constraint firstItem="lha-ko-SQx" firstAttribute="top" secondItem="3F9-ug-T3T" secondAttribute="bottom" constant="8" symbolic="YES" id="KiW-j6-F8Y"/>
@@ -148,6 +161,8 @@
                             <constraint firstItem="ZWh-fN-Pei" firstAttribute="leading" secondItem="h6E-tE-r7J" secondAttribute="leading" constant="29" id="awU-kF-9YO"/>
                             <constraint firstItem="kFG-cY-kh5" firstAttribute="top" secondItem="3F9-ug-T3T" secondAttribute="top" id="cIp-6c-F7G"/>
                             <constraint firstItem="h6E-tE-r7J" firstAttribute="trailing" secondItem="3F9-ug-T3T" secondAttribute="trailing" id="dCh-gW-vgh"/>
+                            <constraint firstItem="h6E-tE-r7J" firstAttribute="trailing" secondItem="BMH-DP-PIN" secondAttribute="trailing" id="e6y-ac-BHM"/>
+                            <constraint firstItem="JIg-r3-sho" firstAttribute="top" secondItem="BMH-DP-PIN" secondAttribute="bottom" id="eO2-VU-cF6"/>
                             <constraint firstItem="0VC-EE-O0a" firstAttribute="leading" secondItem="kFG-cY-kh5" secondAttribute="trailing" constant="20" id="giU-lX-LFs"/>
                             <constraint firstItem="h6E-tE-r7J" firstAttribute="trailing" secondItem="sQg-lA-NyB" secondAttribute="trailing" constant="70" id="iqz-JY-lqC"/>
                             <constraint firstItem="kFG-cY-kh5" firstAttribute="centerX" secondItem="0dQ-iT-ff3" secondAttribute="centerX" id="jo9-az-h64"/>
@@ -156,6 +171,7 @@
                             <constraint firstItem="3F9-ug-T3T" firstAttribute="centerX" secondItem="aAo-va-TwH" secondAttribute="centerX" id="uFJ-kW-hao"/>
                             <constraint firstItem="rrn-iR-T0x" firstAttribute="top" secondItem="0VC-EE-O0a" secondAttribute="bottom" constant="21.5" id="uax-tL-x7k"/>
                             <constraint firstItem="3F9-ug-T3T" firstAttribute="centerX" secondItem="lha-ko-SQx" secondAttribute="centerX" constant="-7" id="x98-tN-Pqg"/>
+                            <constraint firstItem="BMH-DP-PIN" firstAttribute="leading" secondItem="h6E-tE-r7J" secondAttribute="leading" id="xgm-d5-urp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h6E-tE-r7J"/>
                     </view>
@@ -163,13 +179,17 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="awayImageView" destination="3F9-ug-T3T" id="y8I-PW-B8J"/>
+                        <outlet property="awayLabel" destination="aAo-va-TwH" id="gIK-of-66V"/>
                         <outlet property="awayTeamNameLabel" destination="lha-ko-SQx" id="CMN-sw-ObU"/>
                         <outlet property="dateTitleLabel" destination="x4f-XB-WGN" id="P3O-uC-inl"/>
                         <outlet property="dayBeforeButton" destination="IxL-Ih-ARu" id="pqO-JN-THm"/>
                         <outlet property="gameScoreLabel" destination="rrn-iR-T0x" id="4Zi-ln-TID"/>
                         <outlet property="homeImageView" destination="kFG-cY-kh5" id="MIP-RN-mtw"/>
+                        <outlet property="homeLabel" destination="ZWh-fN-Pei" id="KU3-f1-6S1"/>
                         <outlet property="homeTeamNameLabel" destination="0dQ-iT-ff3" id="MeN-Qe-itH"/>
                         <outlet property="nextDayButton" destination="fxX-Zk-hR0" id="9Zr-22-flx"/>
+                        <outlet property="noGamesLabel" destination="BMH-DP-PIN" id="082-bi-SHV"/>
+                        <outlet property="scoreLabel" destination="0VC-EE-O0a" id="ZdZ-sf-zph"/>
                         <outlet property="stadiumButton" destination="epu-2L-tpC" id="Fes-iL-lZZ"/>
                     </connections>
                 </viewController>

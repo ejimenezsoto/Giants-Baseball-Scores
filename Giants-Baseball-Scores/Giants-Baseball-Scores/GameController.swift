@@ -20,7 +20,7 @@ class GameController {
         
         var request = URLRequest(url: baseURL)
         request.httpMethod = HTTPMethod.get.rawValue
-        request.addValue("e858b807cfa14840b026e5dc9f6f21a1", forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
+        request.addValue("c750504d0e8049bc94816da5c6cf769c", forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             
