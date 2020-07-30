@@ -13,6 +13,8 @@ class GameViewController: UIViewController {
     // Homepage Controller temporary instance
     let gameController = GameController()
     
+    let stadiums = AllStadiums()
+    
     
     // Properties
     var giantsGames: [Game] = []
@@ -135,33 +137,43 @@ class GameViewController: UIViewController {
                     
                     if self.filteredGames.first?.homeTeamName == "SF" {
                         self.homeImageView.image = UIImage(named: "San Francisco Giants")
+                        self.stadiumButton.setTitle(self.stadiums.sanFransiscoGiants.name, for: .normal)
                     }
                     if self.filteredGames.first?.homeTeamName == "LAD" {
                         self.homeImageView.image = UIImage(named: "Los Angeles Dodgers")
+                         self.stadiumButton.setTitle(self.stadiums.losAngelesDodgers.name, for: .normal)
                     }
                     if self.filteredGames.first?.homeTeamName == "SD" {
                         self.homeImageView.image = UIImage(named: "San Diego Padres")
+                         self.stadiumButton.setTitle(self.stadiums.sanDiegoPadres.name, for: .normal)
                     }
                     if self.filteredGames.first?.homeTeamName == "TEX" {
                         self.homeImageView.image = UIImage(named: "Texas Rangers")
+                         self.stadiumButton.setTitle(self.stadiums.texasRangers.name, for: .normal)
                     }
                     if self.filteredGames.first?.homeTeamName == "COL" {
                         self.homeImageView.image = UIImage(named: "Colorado Rockies")
+                         self.stadiumButton.setTitle(self.stadiums.coloradoRockies.name, for: .normal)
                     }
                     if self.filteredGames.first?.homeTeamName == "HOU" {
                         self.homeImageView.image = UIImage(named: "Houston Astros")
+                         self.stadiumButton.setTitle(self.stadiums.houstonAstros.name, for: .normal)
                     }
                     if self.filteredGames.first?.homeTeamName == "OAK" {
                         self.homeImageView.image = UIImage(named: "Oakland Athletic")
+                         self.stadiumButton.setTitle(self.stadiums.oaklandAthletic.name, for: .normal)
                     }
                     if self.filteredGames.first?.homeTeamName == "LAA" {
                         self.homeImageView.image = UIImage(named: "Los Angeles Angels")
+                         self.stadiumButton.setTitle(self.stadiums.losAngelesAngels.name, for: .normal)
                     }
                     if self.filteredGames.first?.homeTeamName == "ARI" {
                         self.homeImageView.image = UIImage(named: "Arizona Diamondbacks")
+                         self.stadiumButton.setTitle(self.stadiums.arizonaDiamondbacks.name, for: .normal)
                     }
                     if self.filteredGames.first?.homeTeamName == "SEA" {
                         self.homeImageView.image = UIImage(named: "Seattle Mariners")
+                         self.stadiumButton.setTitle(self.stadiums.seattleMariners.name, for: .normal)
                     }
                     if self.filteredGames.first?.awayTeamName == "SF" {
                         self.awayImageView.image = UIImage(named: "San Francisco Giants")

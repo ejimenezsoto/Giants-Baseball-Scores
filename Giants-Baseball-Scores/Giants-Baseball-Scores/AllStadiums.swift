@@ -8,6 +8,10 @@
 
 import Foundation
 
+
+
+class AllStadiums {
+    
 struct Stadiums {
     
     var name: String
@@ -44,3 +48,6 @@ let losAngelesAngels = Stadiums(name: "Angel Stadium of Anaheim", teamAbrv: "LAA
 let arizonaDiamondbacks = Stadiums(name: "Chase Field", teamAbrv: "ARI", geoLat: 33.445526, geoLong: -112.066721)
 
 let seattleMariners = Stadiums(name: "T-Mobile Park", teamAbrv: "SEA", geoLat: 47.591358, geoLong: -122.332283)
+
+
+}

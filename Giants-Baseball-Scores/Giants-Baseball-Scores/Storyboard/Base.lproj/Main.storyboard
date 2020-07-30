@@ -82,10 +82,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="JIg-r3-sho">
-                                <rect key="frame" x="146" y="326" width="122.5" height="302"/>
+                                <rect key="frame" x="20" y="326" width="374" height="302"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epu-2L-tpC">
-                                        <rect key="frame" x="25" y="0.0" width="73" height="302"/>
+                                        <rect key="frame" x="20" y="0.0" width="334" height="302"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Stadium"/>
                                         <connections>
@@ -93,6 +93,12 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="epu-2L-tpC" secondAttribute="trailing" constant="20" id="7ZV-IQ-g18"/>
+                                    <constraint firstItem="epu-2L-tpC" firstAttribute="leading" secondItem="JIg-r3-sho" secondAttribute="leading" constant="20" id="7f1-YZ-Z9m"/>
+                                    <constraint firstItem="epu-2L-tpC" firstAttribute="leading" secondItem="JIg-r3-sho" secondAttribute="leading" constant="20" id="GDo-7Y-4oI"/>
+                                    <constraint firstAttribute="trailing" secondItem="epu-2L-tpC" secondAttribute="trailing" constant="20" id="UNA-0l-FQf"/>
+                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrn-iR-T0x" userLabel="Game Score Label">
                                 <rect key="frame" x="179" y="269.5" width="56.5" height="26.5"/>
@@ -136,8 +142,8 @@
                             <constraint firstItem="BMH-DP-PIN" firstAttribute="top" secondItem="kFG-cY-kh5" secondAttribute="bottom" id="9YJ-7m-c9u"/>
                             <constraint firstItem="rrn-iR-T0x" firstAttribute="centerX" secondItem="sQg-lA-NyB" secondAttribute="centerX" id="9Zc-vi-fdC"/>
                             <constraint firstItem="kFG-cY-kh5" firstAttribute="bottom" secondItem="rrn-iR-T0x" secondAttribute="bottom" id="C49-5t-J64"/>
-                            <constraint firstItem="h6E-tE-r7J" firstAttribute="trailing" secondItem="JIg-r3-sho" secondAttribute="trailing" constant="145.5" id="DW1-Pc-IqI"/>
-                            <constraint firstItem="JIg-r3-sho" firstAttribute="leading" secondItem="h6E-tE-r7J" secondAttribute="leading" constant="146" id="GPl-f0-g9J"/>
+                            <constraint firstItem="JIg-r3-sho" firstAttribute="leading" secondItem="h6E-tE-r7J" secondAttribute="leading" constant="20" id="DLP-gt-PC2"/>
+                            <constraint firstItem="h6E-tE-r7J" firstAttribute="trailing" secondItem="JIg-r3-sho" secondAttribute="trailing" constant="20" id="Eyi-Kd-ACE"/>
                             <constraint firstItem="rrn-iR-T0x" firstAttribute="centerX" secondItem="0VC-EE-O0a" secondAttribute="centerX" id="JfL-88-N2l"/>
                             <constraint firstItem="ZWh-fN-Pei" firstAttribute="centerX" secondItem="0dQ-iT-ff3" secondAttribute="centerX" id="KFb-aT-0IS"/>
                             <constraint firstItem="lha-ko-SQx" firstAttribute="top" secondItem="3F9-ug-T3T" secondAttribute="bottom" constant="8" symbolic="YES" id="KiW-j6-F8Y"/>
