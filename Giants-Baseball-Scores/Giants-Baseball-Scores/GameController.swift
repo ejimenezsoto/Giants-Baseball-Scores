@@ -80,3 +80,39 @@ class GameController {
         return dateFormatter
     }
 }
+
+//MARK: - Not doing anything with this yet. An attempt be able to utilize date ranges in the json.
+class Dates {
+    
+    static func dateFromString(_ dateString: String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        
+        return dateFormatter.date(from: dateString)!
+    }
+    
+    static func printDatesBetweenInterval(_ startDate: Date, _ endDate: Date) -> String {
+        
+        var startDate = startDate
+        let calendar = Calendar.current
+        var somethin = "["
+        
+        var dateFormatter: DateFormatter {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+            return dateFormatter
+        }
+        
+        while startDate <= endDate {
+            if startDate < endDate {
+                somethin.append("\"\(dateFormatter.string(from: startDate))\", ")
+            } else {
+                somethin.append("\"\(dateFormatter.string(from: startDate))\"")
+            }
+            startDate = calendar.date(byAdding: .day, value: 1, to: startDate)!
+        }
+        somethin.append("]")
+        return somethin
+    }
+}
+
