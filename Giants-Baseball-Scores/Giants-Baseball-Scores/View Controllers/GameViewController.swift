@@ -15,6 +15,7 @@ class GameViewController: UIViewController {
     
     let stadiums = AllStadiums()
     
+    var buttonLabel: String = ""
     
     // Properties
     var giantsGames: [Game] = []
@@ -39,24 +40,24 @@ class GameViewController: UIViewController {
     @IBOutlet weak var noGamesLabel: UILabel!
     // Home Team Labels
     @IBOutlet weak var homeImageView: UIImageView!
-    @IBOutlet weak var homeStandingsLabel: UILabel!
     @IBOutlet weak var homeTeamNameLabel: UILabel!
     
     //Away Team Labels
     @IBOutlet weak var awayImageView: UIImageView!
-    @IBOutlet weak var awayStandingsLabel: UILabel!
     @IBOutlet weak var awayTeamNameLabel: UILabel!
     
     // Game Score and Stadium Labels
     @IBOutlet weak var gameScoreLabel: UILabel!
     @IBOutlet weak var stadiumButton: UIButton!
     
+     
+    
+    
     @IBAction func tapdayBeforeButton(_ sender: UIButton) {
         if let dayBefore = Calendar.current.date(byAdding: .day, value: -1, to: date) {
             date = dayBefore
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "E, MMM d"
-            
             let dateString = dateFormatter.string(from: dayBefore)
             dateTitleLabel.text = dateString
             dateTitleLabel.sizeToFit()
@@ -137,48 +138,59 @@ class GameViewController: UIViewController {
                     if self.filteredGames.first?.homeTeamName == "SF" {
                         self.homeImageView.image = UIImage(named: "San Francisco Giants")
                         self.stadiumButton.setTitle(self.stadiums.sanFransiscoGiants.name, for: .normal)
+                        self.buttonLabel = self.stadiums.sanFransiscoGiants.name
                     }
                     if self.filteredGames.first?.homeTeamName == "LAD" {
                         self.homeImageView.image = UIImage(named: "Los Angeles Dodgers")
                          self.stadiumButton.setTitle(self.stadiums.losAngelesDodgers.name, for: .normal)
+                        self.buttonLabel = self.stadiums.losAngelesDodgers.name
                     }
                     if self.filteredGames.first?.homeTeamName == "SD" {
                         self.homeImageView.image = UIImage(named: "San Diego Padres")
                          self.stadiumButton.setTitle(self.stadiums.sanDiegoPadres.name, for: .normal)
+                        self.buttonLabel = self.stadiums.sanDiegoPadres.name
                     }
                     if self.filteredGames.first?.homeTeamName == "TEX" {
                         self.homeImageView.image = UIImage(named: "Texas Rangers")
                          self.stadiumButton.setTitle(self.stadiums.texasRangers.name, for: .normal)
+                        self.buttonLabel = self.stadiums.texasRangers.name
                     }
                     if self.filteredGames.first?.homeTeamName == "COL" {
                         self.homeImageView.image = UIImage(named: "Colorado Rockies")
                          self.stadiumButton.setTitle(self.stadiums.coloradoRockies.name, for: .normal)
+                        self.buttonLabel = self.stadiums.coloradoRockies.name
                     }
                     if self.filteredGames.first?.homeTeamName == "HOU" {
                         self.homeImageView.image = UIImage(named: "Houston Astros")
                          self.stadiumButton.setTitle(self.stadiums.houstonAstros.name, for: .normal)
+                        self.buttonLabel = self.stadiums.houstonAstros.name
                     }
                     if self.filteredGames.first?.homeTeamName == "OAK" {
                         self.homeImageView.image = UIImage(named: "Oakland Athletic")
                          self.stadiumButton.setTitle(self.stadiums.oaklandAthletic.name, for: .normal)
+                        self.buttonLabel = self.stadiums.oaklandAthletic.name
                     }
                     if self.filteredGames.first?.homeTeamName == "LAA" {
                         self.homeImageView.image = UIImage(named: "Los Angeles Angels")
                          self.stadiumButton.setTitle(self.stadiums.losAngelesAngels.name, for: .normal)
+                        self.buttonLabel = self.stadiums.losAngelesAngels.name
                     }
                     if self.filteredGames.first?.homeTeamName == "ARI" {
                         self.homeImageView.image = UIImage(named: "Arizona Diamondbacks")
                          self.stadiumButton.setTitle(self.stadiums.arizonaDiamondbacks.name, for: .normal)
+                        self.buttonLabel = self.stadiums.arizonaDiamondbacks.name
                     }
                     if self.filteredGames.first?.homeTeamName == "SEA" {
                         self.homeImageView.image = UIImage(named: "Seattle Mariners")
                          self.stadiumButton.setTitle(self.stadiums.seattleMariners.name, for: .normal)
+                        self.buttonLabel = self.stadiums.seattleMariners.name
                     }
                     if self.filteredGames.first?.awayTeamName == "SF" {
                         self.awayImageView.image = UIImage(named: "San Francisco Giants")
                     }
                     if self.filteredGames.first?.awayTeamName == "LAD" {
                         self.awayImageView.image = UIImage(named: "Los Angeles Dodgers")
+                        
                     }
                     if self.filteredGames.first?.awayTeamName == "SD" {
                         self.awayImageView.image = UIImage(named: "San Diego Padres")
@@ -204,6 +216,7 @@ class GameViewController: UIViewController {
                     if self.filteredGames.first?.awayTeamName == "SEA" {
                         self.awayImageView.image = UIImage(named: "Seattle Mariners")
                     }
+                    print(self.buttonLabel)
                     
                     let homeTeamRuns = self.filteredGames.first?.homeTeamRuns
                     let awayTeamRuns = self.filteredGames.first?.awayTeamRuns
@@ -236,4 +249,14 @@ class GameViewController: UIViewController {
         let dateString = dateFormatter.string(from: date) + endOfDateString
         return dateString
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nextVC = segue.destination as? StadiumViewController {
+                   nextVC.stadiumButtonTitle = buttonLabel
+                   
+    }
+        print(buttonLabel)
+}
+
 }
