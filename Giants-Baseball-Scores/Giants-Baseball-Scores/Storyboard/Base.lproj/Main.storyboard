@@ -89,7 +89,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Stadium"/>
                                         <connections>
-                                            <segue destination="E7L-jm-9Ha" kind="show" identifier="stadiumViewSegue" id="TMQ-Iu-NeF"/>
+                                            <segue destination="E7L-jm-9Ha" kind="show" identifier="GoToStadium" id="TMQ-Iu-NeF"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -200,7 +200,7 @@
         <!--Stadium View Controller-->
         <scene sceneID="eqZ-sw-xQr">
             <objects>
-                <viewController id="E7L-jm-9Ha" customClass="StadiumViewController" customModule="Giants_Baseball_Scores" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="E7L-jm-9Ha" customClass="StadiumViewController" customModule="Giants_Baseball_Scores" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KMj-Is-wUG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
