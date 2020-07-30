@@ -90,6 +90,11 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let date = Date()
+        let cal = Calendar(identifier: .gregorian)
+        let newDate = cal.startOfDay(for: date)
+        searchDateString = formatDate(date: newDate)
+        
             updateViews()
     }
     
