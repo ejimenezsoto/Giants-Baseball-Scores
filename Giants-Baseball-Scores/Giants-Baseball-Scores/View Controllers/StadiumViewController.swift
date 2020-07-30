@@ -12,10 +12,9 @@ import MapKit
 class StadiumViewController: UIViewController {
     
     let stadiumCor = AllStadiums()
-    
-    var stadiumButtonTitle: String?
-
     let gameViewController = GameViewController()
+    var stadiumButtonTitle: String?
+    
     
     override func viewWillAppear(_ animated: Bool) {
         _ = navigationController?.popViewController(animated: true)
@@ -24,7 +23,7 @@ class StadiumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if stadiumButtonTitle == "Oracle Park Stadium" {
+        if stadiumButtonTitle == "Oracle Park" {
             openMapForGiants()
         }
         if stadiumButtonTitle == "Dodger Stadium" {
@@ -74,7 +73,7 @@ class StadiumViewController: UIViewController {
         ]
         let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
         let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = "Oracle Park Stadium"
+        mapItem.name = "Oracle Park"
         mapItem.openInMaps(launchOptions: options)
     }
     
