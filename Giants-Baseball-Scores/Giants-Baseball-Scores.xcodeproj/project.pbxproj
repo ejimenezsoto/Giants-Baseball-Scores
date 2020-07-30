@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7997DE8E24D25BFE00E68C7B /* AllStadiums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7997DE8D24D25BFE00E68C7B /* AllStadiums.swift */; };
+		7997DE9024D26BB200E68C7B /* MapLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7997DE8F24D26BB200E68C7B /* MapLocationView.swift */; };
 		79DD5C2424CBA38E001DD39D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD5C2324CBA38E001DD39D /* AppDelegate.swift */; };
 		79DD5C2624CBA38E001DD39D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD5C2524CBA38E001DD39D /* SceneDelegate.swift */; };
 		79DD5C2B24CBA38E001DD39D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79DD5C2924CBA38E001DD39D /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		7997DE8D24D25BFE00E68C7B /* AllStadiums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AllStadiums.swift; path = "Giants-Baseball-Scores/AllStadiums.swift"; sourceTree = SOURCE_ROOT; };
+		7997DE8F24D26BB200E68C7B /* MapLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapLocationView.swift; path = "Giants-Baseball-Scores/MapLocationView.swift"; sourceTree = SOURCE_ROOT; };
 		79DD5C2024CBA38E001DD39D /* Giants-Baseball-Scores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Giants-Baseball-Scores.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DD5C2324CBA38E001DD39D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79DD5C2524CBA38E001DD39D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		79DD5C3D24CBA467001DD39D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7997DE8F24D26BB200E68C7B /* MapLocationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				79DD5C4124CF3FB5001DD39D /* StadiumViewController.swift in Sources */,
 				8E8C186524CF41CB00F2F294 /* Game.swift in Sources */,
 				8EEEE54424D117A000A73FA0 /* Test.swift in Sources */,
+				7997DE9024D26BB200E68C7B /* MapLocationView.swift in Sources */,
 				79DD5C2424CBA38E001DD39D /* AppDelegate.swift in Sources */,
 				79DD5C3F24CF3F94001DD39D /* GameViewController.swift in Sources */,
 				7997DE8E24D25BFE00E68C7B /* AllStadiums.swift in Sources */,

@@ -123,7 +123,6 @@ class GameViewController: UIViewController {
                 let allGiantsGames = giantsAwayGames + giantsHomeGames
                 
                 let filterDateGiantsGames = allGiantsGames.filter { $0.day == self.searchDateString }
-                //print(filterDateGiantsGames)
                 
                 
                 self.filteredGames = filterDateGiantsGames

@@ -7,24 +7,47 @@
 //
 
 import UIKit
+import MapKit
 
 class StadiumViewController: UIViewController {
+    
+    let stadiumCor = AllStadiums()
+    
+    let gameViewController = GameViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+      openMapForGiants()
+    }
+    func openMapForGiants() {
+        
+        let regionDistance:CLLocationDistance = 500
+        let coordinates = CLLocationCoordinate2DMake(37.778473, -122.389595)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = "Oracle Park Stadium"
+        mapItem.openInMaps(launchOptions: options)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func openMapForDodgers() {
+        
+        let regionDistance:CLLocationDistance = 500
+        let coordinates = CLLocationCoordinate2DMake(34.072724, -118.240646)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = "Dodger Stadium"
+        mapItem.openInMaps(launchOptions: options)
     }
-    */
-
+    
+    
 }
