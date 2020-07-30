@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m5z-QR-uzP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yu6-VG-7VR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,7 +10,7 @@
         <!--Game View Controller-->
         <scene sceneID="0wG-D1-tSu">
             <objects>
-                <viewController id="HTK-SF-eq4" customClass="GameViewController" customModule="Giants_Baseball_Scores" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HTK-SF-eq4" customClass="GameViewController" customModule="Giants_Scores" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cYP-4K-ede">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -197,12 +197,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugO-0p-Xfd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="875.36231884057975" y="179.46428571428569"/>
+            <point key="canvasLocation" x="1785.5072463768117" y="179.46428571428569"/>
         </scene>
         <!--Stadium View Controller-->
         <scene sceneID="eqZ-sw-xQr">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="E7L-jm-9Ha" customClass="StadiumViewController" customModule="Giants_Baseball_Scores" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="E7L-jm-9Ha" customClass="StadiumViewController" customModule="Giants_Scores" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KMj-Is-wUG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,25 +224,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OVC-pS-y5V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844.9275362318842" y="178.79464285714286"/>
+            <point key="canvasLocation" x="2755.072463768116" y="178.79464285714286"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="eeG-kP-yYO">
+        <scene sceneID="bMP-lL-6oA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m5z-QR-uzP" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yu6-VG-7VR" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jlx-C7-Uoj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Iq3-V5-GsR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="HTK-SF-eq4" kind="relationship" relationship="rootViewController" id="M7D-pt-I3J"/>
+                        <segue destination="HTK-SF-eq4" kind="relationship" relationship="rootViewController" id="1A7-QS-Gk3"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tdK-td-OAW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tji-wx-4l6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-34.782608695652179" y="179.46428571428569"/>
+            <point key="canvasLocation" x="875.36231884057975" y="179.46428571428569"/>
         </scene>
     </scenes>
     <resources>

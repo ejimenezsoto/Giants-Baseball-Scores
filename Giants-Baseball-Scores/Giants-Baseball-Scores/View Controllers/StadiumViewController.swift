@@ -16,6 +16,10 @@ class StadiumViewController: UIViewController {
     var stadiumButtonTitle: String?
 
     let gameViewController = GameViewController()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        _ = navigationController?.popViewController(animated: true)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
