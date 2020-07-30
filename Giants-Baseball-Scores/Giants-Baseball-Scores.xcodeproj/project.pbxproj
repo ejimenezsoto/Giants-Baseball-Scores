@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7997DE8E24D25BFE00E68C7B /* AllStadiums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7997DE8D24D25BFE00E68C7B /* AllStadiums.swift */; };
-		7997DE9024D26BB200E68C7B /* MapLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7997DE8F24D26BB200E68C7B /* MapLocationView.swift */; };
 		79DD5C2424CBA38E001DD39D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD5C2324CBA38E001DD39D /* AppDelegate.swift */; };
 		79DD5C2624CBA38E001DD39D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD5C2524CBA38E001DD39D /* SceneDelegate.swift */; };
 		79DD5C2B24CBA38E001DD39D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79DD5C2924CBA38E001DD39D /* Main.storyboard */; };
@@ -18,14 +17,11 @@
 		79DD5C4124CF3FB5001DD39D /* StadiumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DD5C4024CF3FB5001DD39D /* StadiumViewController.swift */; };
 		8E22106A24CF587900795FCF /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E22106924CF587900795FCF /* GameController.swift */; };
 		8E8C186524CF41CB00F2F294 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8C186424CF41CB00F2F294 /* Game.swift */; };
-		8EE4237324CFDAC300D6CE0B /* TeamEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE4237224CFDAC300D6CE0B /* TeamEnums.swift */; };
 		8EE4237524CFE3F900D6CE0B /* NetworkEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE4237424CFE3F900D6CE0B /* NetworkEnums.swift */; };
-		8EEEE54424D117A000A73FA0 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEE54324D117A000A73FA0 /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7997DE8D24D25BFE00E68C7B /* AllStadiums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AllStadiums.swift; path = "Giants-Baseball-Scores/AllStadiums.swift"; sourceTree = SOURCE_ROOT; };
-		7997DE8F24D26BB200E68C7B /* MapLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapLocationView.swift; path = "Giants-Baseball-Scores/MapLocationView.swift"; sourceTree = SOURCE_ROOT; };
 		79DD5C2024CBA38E001DD39D /* Giants Scores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Giants Scores.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DD5C2324CBA38E001DD39D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79DD5C2524CBA38E001DD39D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,10 +33,7 @@
 		79DD5C4024CF3FB5001DD39D /* StadiumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StadiumViewController.swift; sourceTree = "<group>"; };
 		8E22106924CF587900795FCF /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameController.swift; path = "Giants-Baseball-Scores/GameController.swift"; sourceTree = SOURCE_ROOT; };
 		8E8C186424CF41CB00F2F294 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Game.swift; path = "Giants-Baseball-Scores/Game.swift"; sourceTree = SOURCE_ROOT; };
-		8EE4237124CFD94600D6CE0B /* Stadiums.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stadiums.json; sourceTree = "<group>"; };
-		8EE4237224CFDAC300D6CE0B /* TeamEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEnums.swift; sourceTree = "<group>"; };
 		8EE4237424CFE3F900D6CE0B /* NetworkEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnums.swift; sourceTree = "<group>"; };
-		8EEEE54324D117A000A73FA0 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,12 +66,11 @@
 		79DD5C2224CBA38E001DD39D /* Giants-Baseball-Scores */ = {
 			isa = PBXGroup;
 			children = (
-				8E22106B24CFBEF700795FCF /* Helpers */,
 				79DD5C3924CBA416001DD39D /* Models */,
 				79DD5C3A24CBA41C001DD39D /* Model Controller */,
 				79DD5C3B24CBA44C001DD39D /* View Controllers */,
-				79DD5C3D24CBA467001DD39D /* Views */,
 				79DD5C3724CBA3B1001DD39D /* Storyboard */,
+				8E22106B24CFBEF700795FCF /* Helpers */,
 				79DD5C3824CBA3BF001DD39D /* Resources */,
 			);
 			path = "Giants-Baseball-Scores";
@@ -130,21 +122,10 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		79DD5C3D24CBA467001DD39D /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				7997DE8F24D26BB200E68C7B /* MapLocationView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		8E22106B24CFBEF700795FCF /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				8EE4237124CFD94600D6CE0B /* Stadiums.json */,
-				8EE4237224CFDAC300D6CE0B /* TeamEnums.swift */,
 				8EE4237424CFE3F900D6CE0B /* NetworkEnums.swift */,
-				8EEEE54324D117A000A73FA0 /* Test.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -222,13 +203,10 @@
 			files = (
 				79DD5C4124CF3FB5001DD39D /* StadiumViewController.swift in Sources */,
 				8E8C186524CF41CB00F2F294 /* Game.swift in Sources */,
-				8EEEE54424D117A000A73FA0 /* Test.swift in Sources */,
-				7997DE9024D26BB200E68C7B /* MapLocationView.swift in Sources */,
 				79DD5C2424CBA38E001DD39D /* AppDelegate.swift in Sources */,
 				79DD5C3F24CF3F94001DD39D /* GameViewController.swift in Sources */,
 				7997DE8E24D25BFE00E68C7B /* AllStadiums.swift in Sources */,
 				8E22106A24CF587900795FCF /* GameController.swift in Sources */,
-				8EE4237324CFDAC300D6CE0B /* TeamEnums.swift in Sources */,
 				79DD5C2624CBA38E001DD39D /* SceneDelegate.swift in Sources */,
 				8EE4237524CFE3F900D6CE0B /* NetworkEnums.swift in Sources */,
 			);

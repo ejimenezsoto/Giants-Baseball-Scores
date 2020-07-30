@@ -19,8 +19,7 @@ struct Game: Decodable {
     var awayTeamName: String
     var homeTeamRuns: Int?
     var awayTeamRuns: Int?
-//    var stadium: Stadium?
-    
+
     private enum ScheduleCodingKeys: String, CodingKey {
         case day = "Day"
         case homeTeamName = "HomeTeam"
@@ -44,7 +43,6 @@ struct Game: Decodable {
         self.awayTeamName = AwayTeam
         self.homeTeamRuns = HomeTeamRuns
         self.awayTeamRuns = AwayTeamRuns
-  
     }
 }
 

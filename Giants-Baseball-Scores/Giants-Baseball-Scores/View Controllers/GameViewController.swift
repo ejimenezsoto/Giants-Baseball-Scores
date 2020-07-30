@@ -50,9 +50,6 @@ class GameViewController: UIViewController {
     @IBOutlet weak var gameScoreLabel: UILabel!
     @IBOutlet weak var stadiumButton: UIButton!
     
-     
-    
-    
     @IBAction func tapdayBeforeButton(_ sender: UIButton) {
         if let dayBefore = Calendar.current.date(byAdding: .day, value: -1, to: date) {
             date = dayBefore
@@ -65,7 +62,6 @@ class GameViewController: UIViewController {
             updateViews()
         }
     }
-    
     @IBAction func tapNextDayButton(_ sender: UIButton) {
         if let nextDay = Calendar.current.date(byAdding: .day, value: 1, to: date) {
             date = nextDay
@@ -78,8 +74,6 @@ class GameViewController: UIViewController {
             searchDateString = formatDate(date: date)
             print(searchDateString)
             updateViews()
-            
-            
         }
     }
     var filteredGames = [Game]()
@@ -97,7 +91,6 @@ class GameViewController: UIViewController {
         let cal = Calendar(identifier: .gregorian)
         let newDate = cal.startOfDay(for: date)
         searchDateString = formatDate(date: newDate)
-        
             updateViews()
     }
     
@@ -122,10 +115,7 @@ class GameViewController: UIViewController {
                 let giantsHomeGames = self.giantsGames.filter { $0.homeTeamName == "SF"}
                 
                 let allGiantsGames = giantsAwayGames + giantsHomeGames
-                
                 let filterDateGiantsGames = allGiantsGames.filter { $0.day == self.searchDateString }
-                
-                
                 self.filteredGames = filterDateGiantsGames
                 
                 print(self.filteredGames)
@@ -224,7 +214,6 @@ class GameViewController: UIViewController {
                     let gameRuns = "\(homeTeamRuns ?? 0) - \(awayTeamRuns ?? 0)"
                     
                     self.gameScoreLabel.text = gameRuns
-                    
                     self.homeImageView.isHidden = false
                     self.homeTeamNameLabel.isHidden = false
                     self.gameScoreLabel.isHidden = false
@@ -234,7 +223,6 @@ class GameViewController: UIViewController {
                     self.awayImageView.isHidden = false
                     self.awayTeamNameLabel.isHidden = false
                     self.stadiumButton.isHidden = false
-                    
                     self.noGamesLabel.isHidden = true
                     
                     print(gameRuns)
@@ -249,8 +237,6 @@ class GameViewController: UIViewController {
         let dateString = dateFormatter.string(from: date) + endOfDateString
         return dateString
     }
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let nextVC = segue.destination as? StadiumViewController {
                    nextVC.stadiumButtonTitle = buttonLabel
