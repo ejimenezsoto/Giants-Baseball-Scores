@@ -10,17 +10,17 @@ import UIKit
 
 class GameViewController: UIViewController {
     
-    //MARK: - Properties
+    // Homepage Controller temporary instance
     let gameController = GameController()
-    let stadiumVC: StadiumViewController? = nil
-    var filteredGames = [Game]()
+    
     let stadiums = AllStadiums()
+    
+    
+    // Properties
     var giantsGames: [Game] = []
     private var date = Date()
     private var searchDateString = ""
-    var noGamesOnDayArray = ["2020-07-22T00:00:00", "2020-07-27T00:00:00", "2020-08-13T00:00:00","2020-08-24T00:00:00","2020-08-31T00:00:00", "2020-09-03T00:00:00", "2020-09-14T00:00:00","2020-09-17T00:00:00","2020-09-28T00:00:00", "2020-09-29T00:00:00", "2020-09-30T00:00:00"]
     
-    //MARK: - IBOutlets
     // Day Navigation Label and Buttons
     @IBOutlet weak var nextDayButton: UIButton!
     @IBOutlet weak var dayBeforeButton: UIButton!
@@ -51,9 +51,6 @@ class GameViewController: UIViewController {
     @IBOutlet weak var gameScoreLabel: UILabel!
     @IBOutlet weak var stadiumButton: UIButton!
     
-    //MARK: - IBActions
-    
-    // Day Before
     @IBAction func tapdayBeforeButton(_ sender: UIButton) {
         if let dayBefore = Calendar.current.date(byAdding: .day, value: -1, to: date) {
             date = dayBefore
@@ -68,7 +65,6 @@ class GameViewController: UIViewController {
         }
     }
     
-    //Next Day
     @IBAction func tapNextDayButton(_ sender: UIButton) {
         if let nextDay = Calendar.current.date(byAdding: .day, value: 1, to: date) {
             date = nextDay
@@ -81,37 +77,30 @@ class GameViewController: UIViewController {
             searchDateString = formatDate(date: date)
             print(searchDateString)
             updateViews()
+            
+            
         }
     }
+    var filteredGames = [Game]()
     
-    // Stadium Button Tapped
-    @IBAction func stadiumButtonTapped(_ sender: UIButton) {
-        
-        if stadiumButton.titleLabel?.text == "Coors Field" {
-            performSegue(withIdentifier: "stadiumViewSegue") {
-                self.stadiumVC?.openMapForRockies()
-            }
-        }
-    }
+    var noGamesOnDayArray = ["2020-07-22T00:00:00", "2020-07-27T00:00:00", "2020-08-13T00:00:00","2020-08-24T00:00:00","2020-08-31T00:00:00", "2020-09-03T00:00:00", "2020-09-14T00:00:00","2020-09-17T00:00:00","2020-09-28T00:00:00", "2020-09-29T00:00:00", "2020-09-30T00:00:00"]
     
-    //MARK: -View Lifecycle
     override func viewWillAppear(_ animated: Bool) {
         updateViews()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let date = Date()
         let cal = Calendar(identifier: .gregorian)
         let newDate = cal.startOfDay(for: date)
         searchDateString = formatDate(date: newDate)
         
-        updateViews()
+            updateViews()
     }
     
-    //MARK: - Private Methods
-    
-    private func updateViews() {
+    func updateViews() {
         
         if noGamesOnDayArray.contains(searchDateString) {
             self.homeImageView.isHidden = true
@@ -124,19 +113,18 @@ class GameViewController: UIViewController {
             self.awayTeamNameLabel.isHidden = true
             self.stadiumButton.isHidden = true
             self.noGamesLabel.isHidden = false
-            
         } else {
-            
             gameController.fetchGiantsSchedule { (result) in
                 
-                // Filtering All Games By Giants + SearchDateString
                 self.giantsGames = self.gameController.gotDamnGiantsGames
                 let giantsAwayGames = self.giantsGames.filter { $0.awayTeamName == "SF"}
                 let giantsHomeGames = self.giantsGames.filter { $0.homeTeamName == "SF"}
+                
                 let allGiantsGames = giantsAwayGames + giantsHomeGames
+                
                 let filterDateGiantsGames = allGiantsGames.filter { $0.day == self.searchDateString }
                 
-                // Assigning filtered games to local variable
+                
                 self.filteredGames = filterDateGiantsGames
                 
                 print(self.filteredGames)
@@ -152,39 +140,39 @@ class GameViewController: UIViewController {
                     }
                     if self.filteredGames.first?.homeTeamName == "LAD" {
                         self.homeImageView.image = UIImage(named: "Los Angeles Dodgers")
-                        self.stadiumButton.setTitle(self.stadiums.losAngelesDodgers.name, for: .normal)
+                         self.stadiumButton.setTitle(self.stadiums.losAngelesDodgers.name, for: .normal)
                     }
                     if self.filteredGames.first?.homeTeamName == "SD" {
                         self.homeImageView.image = UIImage(named: "San Diego Padres")
-                        self.stadiumButton.setTitle(self.stadiums.sanDiegoPadres.name, for: .normal)
+                         self.stadiumButton.setTitle(self.stadiums.sanDiegoPadres.name, for: .normal)
                     }
                     if self.filteredGames.first?.homeTeamName == "TEX" {
                         self.homeImageView.image = UIImage(named: "Texas Rangers")
-                        self.stadiumButton.setTitle(self.stadiums.texasRangers.name, for: .normal)
+                         self.stadiumButton.setTitle(self.stadiums.texasRangers.name, for: .normal)
                     }
                     if self.filteredGames.first?.homeTeamName == "COL" {
                         self.homeImageView.image = UIImage(named: "Colorado Rockies")
-                        self.stadiumButton.setTitle(self.stadiums.coloradoRockies.name, for: .normal)
+                         self.stadiumButton.setTitle(self.stadiums.coloradoRockies.name, for: .normal)
                     }
                     if self.filteredGames.first?.homeTeamName == "HOU" {
                         self.homeImageView.image = UIImage(named: "Houston Astros")
-                        self.stadiumButton.setTitle(self.stadiums.houstonAstros.name, for: .normal)
+                         self.stadiumButton.setTitle(self.stadiums.houstonAstros.name, for: .normal)
                     }
                     if self.filteredGames.first?.homeTeamName == "OAK" {
                         self.homeImageView.image = UIImage(named: "Oakland Athletic")
-                        self.stadiumButton.setTitle(self.stadiums.oaklandAthletic.name, for: .normal)
+                         self.stadiumButton.setTitle(self.stadiums.oaklandAthletic.name, for: .normal)
                     }
                     if self.filteredGames.first?.homeTeamName == "LAA" {
                         self.homeImageView.image = UIImage(named: "Los Angeles Angels")
-                        self.stadiumButton.setTitle(self.stadiums.losAngelesAngels.name, for: .normal)
+                         self.stadiumButton.setTitle(self.stadiums.losAngelesAngels.name, for: .normal)
                     }
                     if self.filteredGames.first?.homeTeamName == "ARI" {
                         self.homeImageView.image = UIImage(named: "Arizona Diamondbacks")
-                        self.stadiumButton.setTitle(self.stadiums.arizonaDiamondbacks.name, for: .normal)
+                         self.stadiumButton.setTitle(self.stadiums.arizonaDiamondbacks.name, for: .normal)
                     }
                     if self.filteredGames.first?.homeTeamName == "SEA" {
                         self.homeImageView.image = UIImage(named: "Seattle Mariners")
-                        self.stadiumButton.setTitle(self.stadiums.seattleMariners.name, for: .normal)
+                         self.stadiumButton.setTitle(self.stadiums.seattleMariners.name, for: .normal)
                     }
                     if self.filteredGames.first?.awayTeamName == "SF" {
                         self.awayImageView.image = UIImage(named: "San Francisco Giants")
@@ -241,8 +229,6 @@ class GameViewController: UIViewController {
             }
         }
     }
-    
-    //Date Formatter
     private func formatDate(date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
