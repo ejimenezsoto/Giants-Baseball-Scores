@@ -26,7 +26,7 @@
 /* Begin PBXFileReference section */
 		7997DE8D24D25BFE00E68C7B /* AllStadiums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AllStadiums.swift; path = "Giants-Baseball-Scores/AllStadiums.swift"; sourceTree = SOURCE_ROOT; };
 		7997DE8F24D26BB200E68C7B /* MapLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapLocationView.swift; path = "Giants-Baseball-Scores/MapLocationView.swift"; sourceTree = SOURCE_ROOT; };
-		79DD5C2024CBA38E001DD39D /* Giants-Baseball-Scores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Giants-Baseball-Scores.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79DD5C2024CBA38E001DD39D /* Giants Scores.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Giants Scores.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DD5C2324CBA38E001DD39D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79DD5C2524CBA38E001DD39D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		79DD5C2A24CBA38E001DD39D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		79DD5C2124CBA38E001DD39D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				79DD5C2024CBA38E001DD39D /* Giants-Baseball-Scores.app */,
+				79DD5C2024CBA38E001DD39D /* Giants Scores.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 			);
 			name = "Giants-Baseball-Scores";
 			productName = "Giants-Baseball-Scores";
-			productReference = 79DD5C2024CBA38E001DD39D /* Giants-Baseball-Scores.app */;
+			productReference = 79DD5C2024CBA38E001DD39D /* Giants Scores.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -383,7 +383,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.EnzoJimenezSoto.Giants-Baseball-Scores";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Giants Scores";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -402,7 +402,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.EnzoJimenezSoto.Giants-Baseball-Scores";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Giants Scores";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
