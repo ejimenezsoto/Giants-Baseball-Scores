@@ -17,6 +17,8 @@ class GameViewController: UIViewController {
     
     
     // Properties
+    @IBOutlet weak var atStadiumLabel: UILabel!
+    @IBOutlet weak var tapButtonAboveLabel: UILabel!
     var buttonLabel: String = ""
     var giantsGames: [Game] = []
     private var date = Date()
@@ -97,6 +99,8 @@ class GameViewController: UIViewController {
         self.awayTeamNameLabel.isHidden = true
         self.stadiumButton.isHidden = true
         self.noGamesLabel.isHidden = true
+        self.atStadiumLabel.isHidden = true
+        self.tapButtonAboveLabel.isHidden = true
         
         let date = Date()
         let cal = Calendar(identifier: .gregorian)
@@ -117,6 +121,8 @@ class GameViewController: UIViewController {
             self.awayImageView.isHidden = true
             self.awayTeamNameLabel.isHidden = true
             self.stadiumButton.isHidden = true
+            self.atStadiumLabel.isHidden = true
+            self.tapButtonAboveLabel.isHidden = true
             self.noGamesLabel.isHidden = false
         } else {
             gameController.fetchGiantsSchedule { (result) in
@@ -234,6 +240,8 @@ class GameViewController: UIViewController {
                     self.awayImageView.isHidden = false
                     self.awayTeamNameLabel.isHidden = false
                     self.stadiumButton.isHidden = false
+                    self.atStadiumLabel.isHidden = false
+                    self.tapButtonAboveLabel.isHidden = false
                     self.noGamesLabel.isHidden = true
                     
                     print(gameRuns)
