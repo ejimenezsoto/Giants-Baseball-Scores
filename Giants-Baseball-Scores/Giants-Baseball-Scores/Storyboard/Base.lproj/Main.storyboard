@@ -203,6 +203,7 @@
                     <navigationItem key="navigationItem" title="Giants Scores" id="eac-KG-hBi"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="atStadiumLabel" destination="fno-pd-7Oo" id="dcj-Br-ThV"/>
                         <outlet property="awayImageView" destination="3F9-ug-T3T" id="y8I-PW-B8J"/>
                         <outlet property="awayLabel" destination="aAo-va-TwH" id="gIK-of-66V"/>
                         <outlet property="awayTeamNameLabel" destination="lha-ko-SQx" id="CMN-sw-ObU"/>
@@ -216,6 +217,7 @@
                         <outlet property="noGamesLabel" destination="BMH-DP-PIN" id="082-bi-SHV"/>
                         <outlet property="scoreLabel" destination="0VC-EE-O0a" id="ZdZ-sf-zph"/>
                         <outlet property="stadiumButton" destination="epu-2L-tpC" id="Fes-iL-lZZ"/>
+                        <outlet property="tapButtonAboveLabel" destination="hoG-gk-ESC" id="tZV-Mx-VaU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugO-0p-Xfd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
