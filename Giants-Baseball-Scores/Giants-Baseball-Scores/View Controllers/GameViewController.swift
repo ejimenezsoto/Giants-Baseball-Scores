@@ -10,6 +10,7 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    
     // Homepage Controller temporary instance
     let gameController = GameController()
     let stadiums = AllStadiums()
@@ -36,6 +37,7 @@ class GameViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var buttonView: UIView!
     @IBOutlet weak var homeLabel: UILabel!
     @IBOutlet weak var awayLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -85,7 +87,6 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.homeImageView.isHidden = true
         self.homeTeamNameLabel.isHidden = true
         self.gameScoreLabel.isHidden = true
